@@ -13,7 +13,7 @@ export default function SwipBox() {
                 <img src="./assets/settings.svg" alt="setting-icon" />
                 Settings
             </button>
-            <form className="p-8 sm:px-12 bg-white rounded-2xl lg:mt-16 mt-8">
+            <form className="p-8 sm:px-12 bg-white dark:bg-dark400 rounded-2xl lg:mt-16 mt-8">
                 <div className="flex items-center justify-between mb-8">
                     <div className="flex flex-col font-semibold text-gray-500 text-xl">
                         Swap

@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
-import Nav from './components/Nav';
+import Nav from './components/navbar/Nav';
 import Farm from './pages/Farm';
 import Home from './pages/Home';
+import NFTs from './pages/NFTs';
 import Pool from './pages/Pool';
 import Stake from './pages/Stake';
 import Trade from './pages/Trade';
 
 const Wrapper = ({ children }) => {
     const location = useLocation();
-    console.log(location);
     useEffect(() => {
         document.documentElement.scrollTo(0, 0);
     }, [location.pathname]);
@@ -66,6 +66,7 @@ function App() {
                     <Route path="/pool" element={<Pool />} />
                     <Route path="/stake" element={<Stake />} />
                     <Route path="/farm" element={<Farm />} />
+                    <Route path="/NFTs" element={<NFTs />} />
                 </Routes>
                 <Footer />
             </Wrapper>

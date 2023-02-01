@@ -38,8 +38,8 @@ function getGradient(ctx, chartArea) {
         width = chartWidth;
         height = chartHeight;
         gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-        gradient.addColorStop(0, 'hsl(22deg 100% 80%)');
-        gradient.addColorStop(1, 'hsl(22deg 100% 60%)');
+        gradient.addColorStop(0, 'hsl(22, 100%, 80%, 0)');
+        gradient.addColorStop(1, 'hsl(22, 100%, 60%, 1)');
     }
 
     return gradient;

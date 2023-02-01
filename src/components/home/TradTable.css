@@ -5,8 +5,16 @@ table > thead > tr > th {
   color: rgb(150, 150, 150);
 }
 
+tbody > tr {
+  border-radius: 10px;
+}
+
 tbody > tr:hover {
   background: hsl(24, 18%, 89%);
+}
+
+.dark tbody > tr:hover {
+  background-color: hsl(234, 18%, 34%);
 }
 
 tbody > tr > td {
@@ -15,4 +23,8 @@ tbody > tr > td {
   font-size: 14px;
   text-align: center;
   font-weight: 600;
+}
+
+.dark tbody > tr > td {
+  color: white;
 }

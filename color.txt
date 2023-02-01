@@ -1,0 +1,6 @@
+black500: connect wallet box;
+
+dark400: search bg
+dark500: bg
+dark700: button bg;
+dark900: text;

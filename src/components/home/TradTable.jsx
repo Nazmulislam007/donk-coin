@@ -87,9 +87,9 @@ export default function TradTable() {
     ];
 
     return (
-        <div className="bg-pink100 py-20">
+        <div className="bg-pink100 dark:bg-dark500 py-20">
             <section className="max-w-6xl w-[90%] mx-auto">
-                <h3 className="text-2xl font-medium mb-10">Top Traded</h3>
+                <h3 className="text-2xl font-medium mb-10 dark:text-white">Top Traded</h3>
                 <div className="overflow-x-auto">
                     <table className="table-auto min-w-[800px] w-full">
                         <thead>
@@ -112,8 +112,8 @@ export default function TradTable() {
                                     </td>
                                     <td>{volume}</td>
                                     <td>{price}</td>
-                                    <td className="text-green-500">{_24H}</td>
-                                    <td className="text-green-500">{_7D}</td>
+                                    <td className="!text-green-500">{_24H}</td>
+                                    <td className="!text-green-500">{_7D}</td>
                                 </tr>
                             ))}
                         </tbody>

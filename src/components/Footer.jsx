@@ -2,20 +2,20 @@ import React from 'react';
 
 export default function Footer() {
     return (
-        <footer className="py-24">
+        <footer className="py-24 dark:bg-dark400 dark:text-dark900">
             <div className="max-w-6xl w-[90%] mx-auto flex items-start justify-between gap-8 flex-wrap">
                 <ul>
-                    <li className="font-bold text-xl mb-4">Need help?</li>
+                    <li className="font-bold text-xl mb-4 dark:text-white">Need help?</li>
                     <li className="mb-4 text-sm font-medium">
                         Visit{' '}
-                        <a href="/" className="text-orange500 underline">
+                        <a href="/" className="text-orange500 hover:underline">
                             our support centre
                         </a>{' '}
                         for troubleshooting
                     </li>
                     <li className="mb-5 text-sm font-medium">
                         Join for{' '}
-                        <a href="/" className="text-orange500 underline">
+                        <a href="/" className="text-orange500 hover:underline">
                             our official Discord
                         </a>{' '}
                         dedicated support
@@ -63,57 +63,57 @@ export default function Footer() {
                 </ul>
                 <div>
                     <ul className="mb-8">
-                        <li className="font-semibold mb-2">DONK COIN Token</li>
-                        <li className="underline mb-2 text-sm">
+                        <li className="font-semibold mb-2 dark:text-white">DONK COIN Token</li>
+                        <li className="hover:underline mb-2 text-sm">
                             <a href="/">Coingecko</a>
                         </li>
-                        <li className="underline mb-2 text-sm">
+                        <li className="hover:underline mb-2 text-sm">
                             <a href="/">CoinMarketCap</a>
                         </li>
                     </ul>
                     <ul>
-                        <li className="font-semibold mb-2">Analytics</li>
-                        <li className="underline mb-2 text-sm">
+                        <li className="font-semibold mb-2 dark:text-white">Analytics</li>
+                        <li className="hover:underline mb-2 text-sm">
                             <a href="/">Token Terminal </a>
                         </li>
-                        <li className="underline mb-2 text-sm">
+                        <li className="hover:underline mb-2 text-sm">
                             <a href="/">Defi Llama</a>
                         </li>
-                        <li className="underline mb-2 text-sm">
+                        <li className="hover:underline mb-2 text-sm">
                             <a href="/">Gecko Terminal</a>
                         </li>
                     </ul>
                 </div>
                 <ul>
-                    <li className="font-semibold mb-2">Exchanges</li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="font-semibold mb-2 dark:text-white">Exchanges</li>
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Binance</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Crypto.com</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Gate.io</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">MEXC</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">OKX</a>
                     </li>
                 </ul>
                 <ul>
-                    <li className="font-semibold mb-2">Business</li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="font-semibold mb-2 dark:text-white">Business</li>
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Apply for Partnership</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Token Listing</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">NFT Listing</a>
                     </li>
-                    <li className="underline mb-2 text-sm">
+                    <li className="hover:underline mb-2 text-sm">
                         <a href="/">Contact Us</a>
                     </li>
                 </ul>

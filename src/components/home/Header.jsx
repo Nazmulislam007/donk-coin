@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
     return (
-        <header className="bg-pink100 md:py-32 py-16">
+        <header className="bg-pink100 dark:bg-dark500 md:py-32 py-16">
             <div className="max-w-6xl w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-10 justify-items-center mb-24">
                 <figure>
                     <img
@@ -26,7 +26,9 @@ export default function Header() {
                     />
                 </figure>
             </div>
-            <h1 className="text-center text-3xl font-semibold">One-stop decentralized trading</h1>
+            <h1 className="text-center text-3xl font-semibold dark:text-white">
+                One-stop decentralized trading
+            </h1>
         </header>
     );
 }

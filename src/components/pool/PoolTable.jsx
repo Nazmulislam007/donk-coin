@@ -105,7 +105,9 @@ export default function PoolTable() {
                                 <img src={icon} alt="terra" width={27} />
                                 <img src={icon} alt="terra" width={27} />
                                 <span>{name}</span>
-                                <span className="px-2 py-[6px] text-xs bg-[#dbdbdb91]">2.08%</span>
+                                <span className="px-2 py-[6px] text-xs bg-[#dbdbdb91] dark:bg-[#ececec1b]">
+                                    2.08%
+                                </span>
                             </td>
                             <td>{liquidity}</td>
                             <td>{volume}</td>
