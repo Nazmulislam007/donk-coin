@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+:root {
+  --pink-900: hsl(18, 11%, 55%);
+  --pink-100: hsl(22, 24%, 93%);
+
+  --blue-900: hsl(220, 26%, 14%);
+  --orang-500: hsl(22, 100%, 65%);
+  --grenn-500: hsl(104, 48%, 48%);
+  --gray-100: hsl(0, 1%, 68%);
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background: #ffffff;
+  background-image: url("/assets/updownarrow.svg");
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: ew-resize;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
