@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
+import { connect, phantom } from '../../assets';
 
 export default function ConnectWallet({ setConnectWallet, connectWallet }) {
     return (
@@ -29,14 +30,14 @@ export default function ConnectWallet({ setConnectWallet, connectWallet }) {
                         type="button"
                         className="flex items-center gap-4 mb-3 px-4 py-2 w-full rounded-xl"
                     >
-                        <img src="./assets/phantom.PNG" alt="phantom" width="60" />
+                        <img src={phantom} alt="phantom" width="60" />
                         <div className="text-start">
                             <p className="text-xl font-semibold dark:text-white">Phantom</p>
                             <p className="text-sm text-gray-500">Connect your phantom wallet</p>
                         </div>
                     </button>
                     <button type="button" className="flex items-center gap-4 px-4 py-2 rounded-xl">
-                        <img src="./assets/connect.PNG" alt="phantom" width="60" />
+                        <img src={connect} alt="phantom" width="60" />
                         <div className="text-start">
                             <p className="text-xl font-semibold dark:text-white">Wallet Connect</p>
                             <p className="text-sm text-gray-500">

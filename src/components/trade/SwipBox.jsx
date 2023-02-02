@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { bitcoin, solona, updownarrow } from '../../assets';
 import ExChangeBtn from './ExChangeBtn';
 import Settings from './Settings';
 
@@ -11,9 +12,9 @@ export default function SwipBox() {
 
             <form className="p-8 sm:px-12 bg-white dark:bg-dark400 rounded-2xl lg:mt-16 mt-8">
                 {flipBtn ? (
-                    <ExChangeBtn img="assets/bitcoin.PNG" name="Bitcoin" />
+                    <ExChangeBtn img={bitcoin} name="Bitcoin" />
                 ) : (
-                    <ExChangeBtn img="assets/salena.PNG" name="Solona" />
+                    <ExChangeBtn img={solona} name="Solona" />
                 )}
                 <div className="w-full relative h-[1px] bg-black dark:bg-white my-12">
                     <button
@@ -21,13 +22,13 @@ export default function SwipBox() {
                         onClick={() => setFlipBtn(!flipBtn)}
                         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"
                     >
-                        <img src="./assets/updownarrow.svg" alt="arrow" />
+                        <img src={updownarrow} alt="arrow" />
                     </button>
                 </div>
                 {!flipBtn ? (
-                    <ExChangeBtn img="assets/bitcoin.PNG" name="Bitcoin" />
+                    <ExChangeBtn img={bitcoin} name="Bitcoin" />
                 ) : (
-                    <ExChangeBtn img="assets/salena.PNG" name="Solona" />
+                    <ExChangeBtn img={solona} name="Solona" />
                 )}
                 <button
                     type="button"

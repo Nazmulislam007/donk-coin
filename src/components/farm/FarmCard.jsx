@@ -1,12 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { etherium, terra } from '../../assets';
 
 export default function FarmCard() {
     return (
-        <article className="bg-white dark:bg-dark300 hover:shadow-lg dark:shadow-black p-5 rounded-md w-full">
+        <Link
+            to="/farm/manage"
+            className="bg-white dark:bg-dark300 hover:shadow-lg dark:shadow-black p-5 rounded-md w-full"
+        >
             <header className="flex items-center gap-2 justify-between mb-5">
                 <div className="flex items-center gap-1">
-                    <img src="./assets/terra.PNG" alt="terra" className="w-8 sm:w-10" />
-                    <img src="./assets/etherium.PNG" alt="etherium" className="w-8 sm:w-10" />
+                    <img src={terra} alt="terra" className="w-8 sm:w-10" />
+                    <img src={etherium} alt="etherium" className="w-8 sm:w-10" />
                     <span className="font-semibold max-sm:text-sm dark:text-darkText">
                         TERRA-ETHERIUM
                     </span>
@@ -37,6 +42,6 @@ export default function FarmCard() {
                     <p className="font-semibold dark:text-darkText">1%</p>
                 </div>
             </div>
-        </article>
+        </Link>
     );
 }

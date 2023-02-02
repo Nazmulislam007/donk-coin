@@ -1,4 +1,5 @@
 import React from 'react';
+import { discord, github, m, twitter } from '../assets';
 
 export default function Footer() {
     return (
@@ -15,7 +16,12 @@ export default function Footer() {
                     </li> */}
                     <li className="mb-5 text-sm font-medium">
                         Join for{' '}
-                        <a href="/" className="text-orange500 hover:underline">
+                        <a
+                            target="_blank"
+                            href="https://discord.gg/c5SnGZWUF8"
+                            className="text-orange500 hover:underline"
+                            rel="noreferrer"
+                        >
                             our official Discord
                         </a>{' '}
                         dedicated support
@@ -28,7 +34,7 @@ export default function Footer() {
                                     href="https://discord.gg/c5SnGZWUF8"
                                     rel="noreferrer"
                                 >
-                                    <img src="./assets/discord.svg" alt="discord" />
+                                    <img src={discord} alt="discord" />
                                 </a>
                             </li>
                             <li className="w-10 h-10 rounded-full bg-orange500 p-2">
@@ -37,22 +43,22 @@ export default function Footer() {
                                     href="https://twitter.com/donksol?s=21&t=H840g90JZa4v2LPWSf689Q"
                                     rel="noreferrer"
                                 >
-                                    <img src="./assets/twitter.svg" alt="twitter" />
+                                    <img src={twitter} alt="twitter" />
                                 </a>
                             </li>
                             <li className="w-10 h-10 rounded-full bg-orange500">
                                 <a href="/">
-                                    <img src="./assets/m.PNG" alt="m" />
+                                    <img src={m} alt="m" />
                                 </a>
                             </li>
                             <li className="w-10 h-10 rounded-full bg-orange500 p-1">
                                 <a href="/">
-                                    <img src="./assets/github.svg" alt="github" />
+                                    <img src={github} alt="github" />
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    {/* <li>
                         <ul className="flex items-center gap-2 text-orange500 font-medium text-sm flex-wrap">
                             <li>
                                 <a href="/">Security</a>
@@ -67,7 +73,7 @@ export default function Footer() {
                                 <a href="/">Terms of Service</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> */}
                 </ul>
                 <div>
                     <ul>

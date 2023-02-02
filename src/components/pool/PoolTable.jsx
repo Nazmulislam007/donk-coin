@@ -1,11 +1,12 @@
 import React from 'react';
+import { bitcoin, etherium, litecoin, solona, terra } from '../../assets';
 import '../home/TradTable.css';
 
 export default function PoolTable() {
     const tradInfo = [
         {
             no: 1,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -14,7 +15,7 @@ export default function PoolTable() {
         },
         {
             no: 2,
-            icon: './assets/bitcoin.PNG',
+            icon: bitcoin,
             name: 'Bitcoin',
             liquidity: '$345,564,839',
             volume: '$23,050',
@@ -23,7 +24,7 @@ export default function PoolTable() {
         },
         {
             no: 3,
-            icon: './assets/litecoin.PNG',
+            icon: litecoin,
             name: 'Litecoin',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -32,7 +33,7 @@ export default function PoolTable() {
         },
         {
             no: 4,
-            icon: './assets/salena.PNG',
+            icon: solona,
             name: 'Solana',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -41,7 +42,7 @@ export default function PoolTable() {
         },
         {
             no: 5,
-            icon: './assets/etherium.PNG',
+            icon: etherium,
             name: 'Etherium',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -50,7 +51,7 @@ export default function PoolTable() {
         },
         {
             no: 6,
-            icon: './assets/litecoin.PNG',
+            icon: litecoin,
             name: 'Litecoin',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -59,7 +60,7 @@ export default function PoolTable() {
         },
         {
             no: 7,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -68,7 +69,7 @@ export default function PoolTable() {
         },
         {
             no: 8,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             liquidity: '$345,564,839',
             volume: '$67',
@@ -77,7 +78,7 @@ export default function PoolTable() {
         },
         {
             no: 9,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             liquidity: '$345,564,839',
             volume: '$67',

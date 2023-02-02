@@ -1,4 +1,5 @@
 import React from 'react';
+import { bitcoin, solona } from '../../assets';
 import LineGraph from './LineGraph';
 
 export default function SwipResult() {
@@ -7,12 +8,12 @@ export default function SwipResult() {
             <header className="grid grid-cols-2 gap-3">
                 <div className="flex items-center gap-3 max-xl:col-span-2">
                     <div className="flex items-center gap-2">
-                        <img src="./assets/terra.PNG" alt="terra" width="40" />
+                        <img src={solona} alt="terra" width="40" />
                         <span className="font-semibold dark:text-white">TERRA</span>
                     </div>
                     <span className="dark:text-white">/</span>
                     <div className="flex items-center gap-2">
-                        <img src="./assets/bitcoin.PNG" alt="terra" width="40" />
+                        <img src={bitcoin} alt="terra" width="40" />
                         <span className="font-semibold dark:text-white">BTC</span>
                     </div>
                 </div>

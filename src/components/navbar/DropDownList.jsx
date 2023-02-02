@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { solona } from '../../assets';
 
 export default function DropDownList() {
     const [showList, setShowList] = useState(false);
@@ -10,13 +11,7 @@ export default function DropDownList() {
                 type="button"
                 onClick={() => setShowList(!showList)}
             >
-                <img
-                    src="./assets/salena.PNG"
-                    alt="salena"
-                    height="27"
-                    width="27"
-                    className="lg:mr-3 mr-1"
-                />
+                <img src={solona} alt="salena" height="27" width="27" className="lg:mr-3 mr-1" />
                 <span className="mr-5 font-semibold hidden lg:block">Solana</span>
                 <svg
                     className={`w-4 h-4 ml-2 ${showList ? 'rotate-180' : ''}`}
@@ -38,7 +33,7 @@ export default function DropDownList() {
                 <div className="z-10 absolute left-0 top-[115%] bg-white dark:bg-dark700 rounded-lg shadow min-w-[220px]">
                     <ul className="p-2 text-sm">
                         <li className="flex items-center gap-3 px-4 py-2 dark:text-white hover:bg-dark700 dark:hover:bg-dark500 hover:text-white rounded-lg">
-                            <img src="./assets/salena.PNG" alt="salena" height="27" width="27" />
+                            <img src={solona} alt="salena" height="27" width="27" />
                             <span className="font-semibold transition-none">Solana</span>
                         </li>
                     </ul>

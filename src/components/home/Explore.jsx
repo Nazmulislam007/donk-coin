@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { a, b, c, d, e } from '../../assets';
 
 export default function Explore() {
     return (
@@ -7,14 +8,14 @@ export default function Explore() {
             <h2 className="text-2xl font-medium mb-10 dark:text-white">
                 Explore Donk Coin Finance
             </h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 auto-rows-fr gap-5">
                 <Link
                     to="/trade"
                     className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#8cb88c] dark:hover:border-white dark:!bg-[#638b65] group transition-all duration-300"
                     style={{ backgroundColor: 'hsl(120, 34%, 86%)' }}
                 >
                     <img
-                        src="./assets/e.PNG"
+                        src={e}
                         className="w-[140px] group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />
@@ -26,7 +27,7 @@ export default function Explore() {
                     style={{ backgroundColor: 'hsl(195, 75%, 89%)' }}
                 >
                     <img
-                        src="./assets/b.PNG"
+                        src={b}
                         className="w-[140px] group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />
@@ -38,7 +39,7 @@ export default function Explore() {
                     style={{ backgroundColor: 'hsl(44, 77%, 88%)' }}
                 >
                     <img
-                        src="./assets/c.PNG"
+                        src={c}
                         className="w-[140px] group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />
@@ -46,11 +47,11 @@ export default function Explore() {
                 </Link>
                 <Link
                     to="/stake"
-                    className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#ffabbf] dark:hover:border-white group transition-all duration-300 dark:!bg-[#74434f]"
+                    className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#ffabbf] dark:hover:border-white group transition-all duration-300 dark:!bg-[#74434f] lg:-mr-[50%] lg:ml-[50%]"
                     style={{ backgroundColor: 'hsl(345, 60%, 92%)' }}
                 >
                     <img
-                        src="./assets/d.PNG"
+                        src={d}
                         className="w-[140px] group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />
@@ -58,11 +59,11 @@ export default function Explore() {
                 </Link>
                 <Link
                     to="/NFTs"
-                    className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#a7a7ff] dark:hover:border-white group transition-all duration-300 dark:!bg-[#2f3146]"
+                    className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#a7a7ff] dark:hover:border-white group transition-all duration-300 dark:!bg-[#2f3146] md:-mr-[50%] md:ml-[50%] "
                     style={{ backgroundColor: 'hsl(240, 90%, 96%)' }}
                 >
                     <img
-                        src="./assets/a.PNG"
+                        src={a}
                         className="w-[140px]  group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />
@@ -73,7 +74,7 @@ export default function Explore() {
                     style={{ backgroundColor: 'hsl(241, 85%, 89%)' }}
                 >
                     <img
-                        src="./assets/c.PNG"
+                        src={c}
                         className="w-[140px] group-hover:scale-110 duration-300 transition-all"
                         alt="a"
                     />

@@ -22,9 +22,7 @@ export default function Stake() {
                         <li className="py-1 px-2 rounded-md cursor-pointer">DONK</li>
                     </ul>
                 </header>
-                <div className="flex gap-10 max-md:flex-wrap">
-                    <GraphSection />
-                </div>
+                <GraphSection />
                 <Cards />
             </section>
         </div>

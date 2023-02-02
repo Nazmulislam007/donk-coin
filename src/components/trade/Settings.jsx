@@ -2,6 +2,7 @@
 import ClearIcon from '@mui/icons-material/Clear';
 import PrivacyTipOutlinedIcon from '@mui/icons-material/PrivacyTipOutlined';
 import React, { useState } from 'react';
+import { settings } from '../../assets';
 
 export default function Settings() {
     const [showHide, setShowHide] = useState(false);
@@ -14,7 +15,7 @@ export default function Settings() {
                 className="flex items-center py-2.5 px-5 bg-orange500 rounded-full gap-2 font-medium text-white ml-auto"
                 onClick={() => setShowHide(!showHide)}
             >
-                <img src="./assets/settings.svg" alt="setting-icon" />
+                <img src={settings} alt="setting-icon" />
                 Settings
             </button>
             <form

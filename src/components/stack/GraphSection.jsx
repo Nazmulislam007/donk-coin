@@ -3,7 +3,7 @@ import Graph from './Graph';
 
 export default function GraphSection() {
     return (
-        <section className="basis-full">
+        <section>
             <header
                 className="flex items-center justify-between gap-2 flex-wrap
             "

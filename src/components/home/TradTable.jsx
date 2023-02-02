@@ -1,11 +1,12 @@
 import React from 'react';
+import { bitcoin, etherium, litecoin, solona, terra } from '../../assets';
 import './TradTable.css';
 
 export default function TradTable() {
     const tradInfo = [
         {
             no: 1,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             volume: '$345,564,839',
             price: '$67',
@@ -14,7 +15,7 @@ export default function TradTable() {
         },
         {
             no: 2,
-            icon: './assets/bitcoin.PNG',
+            icon: bitcoin,
             name: 'Bitcoin',
             volume: '$345,564,839',
             price: '$23,050',
@@ -23,7 +24,7 @@ export default function TradTable() {
         },
         {
             no: 3,
-            icon: './assets/litecoin.PNG',
+            icon: litecoin,
             name: 'Litecoin',
             volume: '$345,564,839',
             price: '$67',
@@ -32,7 +33,7 @@ export default function TradTable() {
         },
         {
             no: 4,
-            icon: './assets/salena.PNG',
+            icon: solona,
             name: 'Solana',
             volume: '$345,564,839',
             price: '$67',
@@ -41,7 +42,7 @@ export default function TradTable() {
         },
         {
             no: 5,
-            icon: './assets/etherium.PNG',
+            icon: etherium,
             name: 'Etherium',
             volume: '$345,564,839',
             price: '$67',
@@ -50,7 +51,7 @@ export default function TradTable() {
         },
         {
             no: 6,
-            icon: './assets/litecoin.PNG',
+            icon: litecoin,
             name: 'Litecoin',
             volume: '$345,564,839',
             price: '$67',
@@ -59,7 +60,7 @@ export default function TradTable() {
         },
         {
             no: 7,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             volume: '$345,564,839',
             price: '$67',
@@ -68,7 +69,7 @@ export default function TradTable() {
         },
         {
             no: 8,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             volume: '$345,564,839',
             price: '$67',
@@ -77,7 +78,7 @@ export default function TradTable() {
         },
         {
             no: 9,
-            icon: './assets/terra.PNG',
+            icon: terra,
             name: 'Terra',
             volume: '$345,564,839',
             price: '$67',

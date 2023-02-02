@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Nav from './components/navbar/Nav';
 import Farm from './pages/Farm';
 import Home from './pages/Home';
+import ManageFarm from './pages/ManageFarm';
 import NFTs from './pages/NFTs';
 import Pool from './pages/Pool';
 import Stake from './pages/Stake';
+import Token from './pages/Token';
 import Trade from './pages/Trade';
 
 const Wrapper = ({ children }) => {
@@ -19,8 +21,6 @@ const Wrapper = ({ children }) => {
 };
 
 function App() {
-    const [connectWallet, setConnectWallet] = useState(false);
-
     // const coinsFinance = [
     //     {
     //         img: './assets/a.PNG',
@@ -51,21 +51,15 @@ function App() {
     return (
         <div>
             <Wrapper>
-                <Nav setConnectWallet={setConnectWallet} />
+                <Nav />
                 <Routes>
-                    <Route
-                        path="/"
-                        element={
-                            <Home
-                                setConnectWallet={setConnectWallet}
-                                connectWallet={connectWallet}
-                            />
-                        }
-                    />
+                    <Route path="/" element={<Home />} />
                     <Route path="/trade" element={<Trade />} />
                     <Route path="/pool" element={<Pool />} />
                     <Route path="/stake" element={<Stake />} />
+                    <Route path="/stake/token" element={<Token />} />
                     <Route path="/farm" element={<Farm />} />
+                    <Route path="/farm/manage" element={<ManageFarm />} />
                     <Route path="/NFTs" element={<NFTs />} />
                 </Routes>
                 <Footer />

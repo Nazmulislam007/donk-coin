@@ -4,12 +4,15 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { logo } from '../../assets';
+import ConnectWallet from './ConnectWallet';
 import DropDownList from './DropDownList';
 import NavItems from './NavItems';
 
-export default function Nav({ setConnectWallet }) {
+export default function Nav() {
     const [dark, setDark] = useState('light');
     const inverse = dark === 'light' ? 'dark' : 'light';
+    const [connectWallet, setConnectWallet] = useState(false);
 
     useEffect(() => {
         const root = window.document.documentElement;
@@ -21,7 +24,7 @@ export default function Nav({ setConnectWallet }) {
         <nav className="bg-pink100 dark:bg-dark500 md:py-6 py-2">
             <div className="flex items-center justify-between gap-3 max-w-7xl mx-auto w-[90%]">
                 <Link to="/" className="h-16 w-16 min-w-[4rem]">
-                    <img src="./assets/logo.PNG" alt="logo" />
+                    <img src={logo} alt="logo" />
                 </Link>
                 <NavItems />
 
@@ -43,6 +46,10 @@ export default function Nav({ setConnectWallet }) {
                         <BackupTableOutlinedIcon />
                         <span className="text-sm font-semibold lg:block hidden">Wallet Connet</span>
                     </button>
+                    <ConnectWallet
+                        connectWallet={connectWallet}
+                        setConnectWallet={setConnectWallet}
+                    />
                 </div>
             </div>
         </nav>

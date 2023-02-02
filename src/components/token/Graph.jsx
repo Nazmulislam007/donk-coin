@@ -48,7 +48,6 @@ function getGradient(ctx, chartArea) {
 const options = {
     responsive: true,
     backgroundColor: 'red',
-    aspectRatio: 2 / 0.7,
     interaction: {
         intersect: false,
         mode: 'index',
@@ -74,12 +73,14 @@ const options = {
     },
     scales: {
         y: {
-            min: 200,
-            max: 800,
+            min: 0,
+            max: 900,
             grid: {
                 display: false,
             },
             ticks: {
+                maxTicksLimit: 10,
+                stepSize: 10,
                 display: false,
             },
             border: {
@@ -112,7 +113,7 @@ const data = {
     datasets: [
         {
             label: 'Dataset 1',
-            data: labels.map(() => faker.datatype.number({ min: 500, max: 600 })),
+            data: labels.map(() => faker.datatype.number({ min: 500, max: 800 })),
             backgroundColor(context) {
                 const { chart } = context;
                 const { ctx, chartArea } = chart;
@@ -123,7 +124,8 @@ const data = {
                 return getGradient(ctx, chartArea);
             },
             pointRadius: 0,
-            borderWidth: 0,
+            borderWidth: 1,
+            borderColor: 'hsl(22, 100%, 60%, 1)',
             fill: true,
         },
     ],
@@ -131,7 +133,7 @@ const data = {
 
 export default function Graph() {
     return (
-        <div className="mb-2 mt-4">
+        <div className="mt-2">
             <Line options={options} data={data} />
         </div>
     );

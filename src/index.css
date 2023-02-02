@@ -29,3 +29,12 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.fic {
+  display: flex;
+  align-items: center;
+}
+
+.custom-shadow {
+  box-shadow: 0px 3px 0 1px #ffaf7a;
+}
