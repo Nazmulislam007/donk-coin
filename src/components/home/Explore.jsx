@@ -68,7 +68,7 @@ export default function Explore() {
                     />
                     <p className="mt-5 font-semibold dark:text-white">Trade NFTs</p>
                 </Link>
-                <div
+                {/* <div
                     className="flex flex-col items-center justify-center p-12 rounded-xl border-2 border-transparent hover:border-[#8381b7] dark:hover:border-white group transition-all duration-300 dark:!bg-[#4d4bb8]"
                     style={{ backgroundColor: 'hsl(241, 85%, 89%)' }}
                 >
@@ -78,7 +78,7 @@ export default function Explore() {
                         alt="a"
                     />
                     <p className="mt-5 font-semibold dark:text-white">Tokens</p>
-                </div>
+                </div> */}
             </div>
         </section>
     );

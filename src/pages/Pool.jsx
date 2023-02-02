@@ -80,7 +80,7 @@ export default function Pool() {
                 <div className="flex items-center gap-3 mt-3 mb-10 max-lg:flex-col-reverse">
                     <label
                         htmlFor="searchTable"
-                        className="flex flex-1 items-center gap-2 p-2 border border-gray-300 rounded-md max-lg:w-full dark:text-white"
+                        className="flex flex-1 items-center gap-2 p-2 border border-gray-300 rounded-md max-lg:w-full dark:text-white dark:border-dark900"
                     >
                         <SearchIcon />
                         <input
@@ -90,7 +90,7 @@ export default function Pool() {
                             className="w-full outline-none focus:outline-none text-sm bg-transparent"
                         />
                     </label>
-                    <button className="py-2 px-4 h-11 border-2 text-pink900 border-pink900 rounded-md text-sm max-lg:w-full">
+                    <button className="py-2 px-4 h-11 border-2 text-pink900 border-pink900 dark:border-dark900 dark:text-darkText rounded-md text-sm max-lg:w-full">
                         Create New Pool
                     </button>
                 </div>

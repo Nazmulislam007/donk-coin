@@ -18,37 +18,14 @@
   --grenn-500: hsl(104, 48%, 48%);
   --gray-100: hsl(0, 1%, 68%);
 }
-
-input[type="range"] {
-  appearance: none;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
 }
 
-.dark input[type="range"] {
-  background: white;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background: #ffffff;
-  background-image: url("/assets/updownarrow.svg");
-  object-fit: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: ew-resize;
-  position: relative;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: transparent;
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

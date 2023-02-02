@@ -12,14 +12,14 @@ export default function Stake() {
                             Stake
                         </h2>
                         <p className="text-sm font-medium text-pink900 dark:text-dark900">
-                            Stake your JOE tokens and earn more.
+                            Stake your DONK tokens and earn more.
                         </p>
                     </div>
                     <ul className="flex items-center font-medium px-1 py-1 rounded-md border border-pink900 text-pink900 w-fit dark:text-dark900 dark:border-dark900">
                         <li className="py-1 px-2 bg-pink900 dark:bg-dark900 text-white rounded-md cursor-pointer">
                             USD
                         </li>
-                        <li className="py-1 px-2 rounded-md cursor-pointer">JOE</li>
+                        <li className="py-1 px-2 rounded-md cursor-pointer">DONK</li>
                     </ul>
                 </header>
                 <div className="flex gap-10 max-md:flex-wrap">

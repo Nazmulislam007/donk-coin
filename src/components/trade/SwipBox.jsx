@@ -1,96 +1,34 @@
 import React, { useState } from 'react';
-import SwipOptions from './SwipOptions';
+import ExChangeBtn from './ExChangeBtn';
+import Settings from './Settings';
 
 export default function SwipBox() {
-    const [showSwipOptions, setShowSwipOptions] = useState(false);
+    const [flipBtn, setFlipBtn] = useState(false);
 
     return (
         <div className="basis-full mt-8 lg:mt-0">
-            <button
-                type="button"
-                className="flex items-center py-2.5 px-5 bg-orange500 rounded-full gap-2 font-medium text-white ml-auto"
-            >
-                <img src="./assets/settings.svg" alt="setting-icon" />
-                Settings
-            </button>
+            <Settings />
+
             <form className="p-8 sm:px-12 bg-white dark:bg-dark400 rounded-2xl lg:mt-16 mt-8">
-                <div className="flex items-center justify-between mb-8">
-                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
-                        Swap
-                        <span>0.0</span>
-                    </div>
+                {flipBtn ? (
+                    <ExChangeBtn img="assets/bitcoin.PNG" name="Bitcoin" />
+                ) : (
+                    <ExChangeBtn img="assets/salena.PNG" name="Solona" />
+                )}
+                <div className="w-full relative h-[1px] bg-black dark:bg-white my-12">
                     <button
-                        className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center"
                         type="button"
-                        onClick={() => setShowSwipOptions(!showSwipOptions)}
+                        onClick={() => setFlipBtn(!flipBtn)}
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"
                     >
-                        <img
-                            src="./assets/terra.PNG"
-                            alt="salena"
-                            height="27"
-                            width="27"
-                            className="mr-3"
-                        />
-                        <span className="mr-5 font-semibold">Solana</span>
-                        <svg
-                            className={`w-4 h-4 ml-2 ${showSwipOptions ? 'rotate-180' : ''}`}
-                            aria-hidden="true"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
+                        <img src="./assets/updownarrow.svg" alt="arrow" />
                     </button>
                 </div>
-                <label htmlFor="range">
-                    <input type="range" id="range" className="w-full" />
-                </label>
-                <div className="flex items-center justify-between mt-10">
-                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
-                        To
-                        <span>0.0</span>
-                    </div>
-                    <button
-                        className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center"
-                        type="button"
-                        onClick={() => setShowSwipOptions(!showSwipOptions)}
-                    >
-                        <img
-                            src="./assets/bitcoin.PNG"
-                            alt="salena"
-                            height="27"
-                            width="27"
-                            className="mr-3"
-                        />
-                        <span className="mr-5 font-semibold">Bitcoin</span>
-                        <svg
-                            className={`w-4 h-4 ml-2 ${showSwipOptions ? 'rotate-180' : ''}`}
-                            aria-hidden="true"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </button>
-                    <SwipOptions
-                        showSwipOptions={showSwipOptions}
-                        setShowSwipOptions={setShowSwipOptions}
-                    />
-                </div>
+                {!flipBtn ? (
+                    <ExChangeBtn img="assets/bitcoin.PNG" name="Bitcoin" />
+                ) : (
+                    <ExChangeBtn img="assets/salena.PNG" name="Solona" />
+                )}
                 <button
                     type="button"
                     className="bg-orange500 w-[80%] mt-8 mx-[10%] text-white py-2.5 rounded-full"

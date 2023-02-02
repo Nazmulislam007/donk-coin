@@ -44,7 +44,7 @@ export default function SwipOptions({ showSwipOptions, setShowSwipOptions }) {
                     <div className="overflow-x-auto">
                         <ul className="flex items-center justify-between gap-1 text-sm mb-2 min-w-[500px] dark:text-white">
                             <li className="py-2 px-3 hover:bg-pink100 dark:hover:bg-darkHover bg-pink100 dark:bg-darkHover cursor-pointer rounded-lg">
-                                Avalanche
+                                Solana
                             </li>
                             <li className="py-2 px-3 hover:bg-pink100 dark:hover:bg-darkHover cursor-pointer rounded-lg">
                                 Top Tokens
