@@ -1,8 +1,11 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
-import { connect, phantom } from '../../assets';
+import { connect, phantom } from '../assets';
+import { useConnectWallet } from '../context/ConnectWalletProvider';
 
-export default function ConnectWallet({ setConnectWallet, connectWallet }) {
+export default function ConnectWallet() {
+    const { connectWalletFn, connectWallet } = useConnectWallet();
+
     return (
         <>
             <button
@@ -10,7 +13,7 @@ export default function ConnectWallet({ setConnectWallet, connectWallet }) {
                 className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000004b] blur-3xl z-8 ${
                     connectWallet ? 'fixed' : 'hidden'
                 }`}
-                onClick={() => setConnectWallet(false)}
+                onClick={() => connectWalletFn(false)}
             />
             <div
                 className={`${

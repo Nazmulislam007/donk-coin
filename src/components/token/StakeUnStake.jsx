@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { bitcoin, litecoin } from '../../assets';
 import AmountInput from './AmountInput';
 import ConnectBtn from './ConnectBtn';
 
 export default function StakeUnStake() {
+    const [stakeUnStake, setStakeUnStake] = useState('Stake');
+
     return (
         <section>
             <div className="fic font-semibold border-b border-gray-300 dark:text-darkText">
                 <button
                     type="button"
-                    className="text-center flex-1 pb-2.5 border-b-2 border-black dark:border-darkText"
+                    className={`${
+                        stakeUnStake === 'Stake' ? 'border-black dark:border-darkText' : ''
+                    } text-center flex-1 pb-2.5 border-b-2`}
+                    onClick={() => setStakeUnStake('Stake')}
                 >
                     Stake
                 </button>
-                <button type="button" className="text-center flex-1 pb-2.5">
+                <button
+                    type="button"
+                    className={`${
+                        stakeUnStake === 'Unstake' ? 'border-black dark:border-darkText' : ''
+                    } text-center flex-1 pb-2.5 border-b-2`}
+                    onClick={() => setStakeUnStake('Unstake')}
+                >
                     Unstake
                 </button>
             </div>

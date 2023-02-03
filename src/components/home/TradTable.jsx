@@ -1,6 +1,6 @@
 import React from 'react';
 import { bitcoin, etherium, litecoin, solona, terra } from '../../assets';
-import './TradTable.css';
+import TradTableRow from './TradTableRow';
 
 export default function TradTable() {
     const tradInfo = [
@@ -95,27 +95,29 @@ export default function TradTable() {
                     <table className="table-auto min-w-[800px] w-full">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>TOKEN</th>
-                                <th>↓ VOLUME (24H)</th>
-                                <th>PRICE</th>
-                                <th>CHANGE (24H)</th>
-                                <th>CHANGE (7D)</th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    #
+                                </th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    TOKEN
+                                </th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    ↓ VOLUME (24H)
+                                </th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    PRICE
+                                </th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    CHANGE (24H)
+                                </th>
+                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                    CHANGE (7D)
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
-                            {tradInfo.map(({ no, _24H, _7D, icon, name, price, volume }) => (
-                                <tr key={no}>
-                                    <td>{no}</td>
-                                    <td className="flex items-center justify-center gap-2">
-                                        <img src={icon} alt="terra" width={25} />
-                                        <span>{name}</span>
-                                    </td>
-                                    <td>{volume}</td>
-                                    <td>{price}</td>
-                                    <td className="!text-green-500">{_24H}</td>
-                                    <td className="!text-green-500">{_7D}</td>
-                                </tr>
+                            {tradInfo.map((rowData) => (
+                                <TradTableRow rowData={rowData} key={rowData.no} />
                             ))}
                         </tbody>
                     </table>

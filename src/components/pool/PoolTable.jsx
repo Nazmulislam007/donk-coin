@@ -1,6 +1,6 @@
 import React from 'react';
 import { bitcoin, etherium, litecoin, solona, terra } from '../../assets';
-import '../home/TradTable.css';
+import PoolTableRow from './PoolTableRow';
 
 export default function PoolTable() {
     const tradInfo = [
@@ -92,29 +92,26 @@ export default function PoolTable() {
             <table className="table-auto min-w-[800px] w-full">
                 <thead>
                     <tr>
-                        <th className="text-start">POOL NAME</th>
-                        <th>↓ LIQUIDITY</th>
-                        <th>VOLUME (24H)</th>
-                        <th>FEES (24H)</th>
-                        <th>APR (24H)</th>
+                        <th className="text-start px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                            POOL NAME
+                        </th>
+                        <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                            ↓ LIQUIDITY
+                        </th>
+                        <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                            VOLUME (24H)
+                        </th>
+                        <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                            FEES (24H)
+                        </th>
+                        <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                            APR (24H)
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                    {tradInfo.map(({ no, APR, icon, name, FEES, liquidity, volume }) => (
-                        <tr key={no}>
-                            <td className="flex items-center justify-start pl-6 gap-2">
-                                <img src={icon} alt="terra" width={27} />
-                                <img src={icon} alt="terra" width={27} />
-                                <span>{name}</span>
-                                <span className="px-2 py-[6px] text-xs bg-[#dbdbdb91] dark:bg-[#ececec1b]">
-                                    2.08%
-                                </span>
-                            </td>
-                            <td>{liquidity}</td>
-                            <td>{volume}</td>
-                            <td>{FEES}</td>
-                            <td>{APR}</td>
-                        </tr>
+                    {tradInfo.map((data) => (
+                        <PoolTableRow data={data} key={data.no} />
                     ))}
                 </tbody>
             </table>

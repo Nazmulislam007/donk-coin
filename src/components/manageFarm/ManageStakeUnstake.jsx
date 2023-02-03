@@ -1,20 +1,31 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SettingsIcon from '@mui/icons-material/Settings';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ConnectBtn from '../token/ConnectBtn';
 
 export default function ManageStakeUnstake() {
+    const [stakeUnStake, setStakeUnStake] = useState('Stake');
+
     return (
         <section className="rounded-2xl bg-white dark:bg-dark300 flex-1">
             <div className="fic font-semibold border-b border-gray-300 dark:text-darkText">
                 <button
                     type="button"
-                    className="text-center flex-1 pb-3 pt-5 border-b-2 border-black dark:border-darkText"
+                    className={`${
+                        stakeUnStake === 'Stake' ? 'border-black dark:border-darkText' : ''
+                    } text-center flex-1 pb-3 pt-5 border-b-2`}
+                    onClick={() => setStakeUnStake('Stake')}
                 >
                     Stake
                 </button>
-                <button type="button" className="text-center flex-1 pb-3 pt-5">
+                <button
+                    type="button"
+                    className={`${
+                        stakeUnStake === 'Unstake' ? 'border-black dark:border-darkText' : ''
+                    } text-center flex-1 pb-3 pt-5 border-b-2`}
+                    onClick={() => setStakeUnStake('Unstake')}
+                >
                     Unstake
                 </button>
             </div>

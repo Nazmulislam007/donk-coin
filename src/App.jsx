@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer';
 import Nav from './components/navbar/Nav';
+import ConnectWallet from './layout/ConnectWallet';
 import Farm from './pages/Farm';
 import Home from './pages/Home';
 import ManageFarm from './pages/ManageFarm';
@@ -52,6 +53,7 @@ function App() {
         <div>
             <Wrapper>
                 <Nav />
+                <ConnectWallet />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/trade" element={<Trade />} />

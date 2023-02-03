@@ -1,5 +1,4 @@
 import React from 'react';
-import './RemittancesTable.css';
 
 export default function RemittancesTable() {
     const tradInfo = [
@@ -65,18 +64,18 @@ export default function RemittancesTable() {
             <div className="overflow-x-auto">
                 <table className="table-auto min-w-[450px] w-full remittance-table">
                     <thead>
-                        <tr>
-                            <th>TIMESTAMP</th>
-                            <th>FEES COLLECTED</th>
-                            <th>USD REMITTED</th>
+                        <tr className="font-medium text-sm text-[rgb(150,150,150)]">
+                            <th className="text-start pb-[10px]">TIMESTAMP</th>
+                            <th className="text-start pb-[10px]">FEES COLLECTED</th>
+                            <th className="text-end pb-[10px]">USD REMITTED</th>
                         </tr>
                     </thead>
                     <tbody>
                         {tradInfo.map(({ no, timestamp, value, price }) => (
-                            <tr key={no}>
-                                <td>{timestamp}</td>
-                                <td>{value}</td>
-                                <td>{price}</td>
+                            <tr key={no} className="rounded-lg text-[13px] dark:text-darkText">
+                                <td className="py-[10px] align-middle text-start">{timestamp}</td>
+                                <td className="py-[10px] align-middle text-start">{value}</td>
+                                <td className="py-[10px] align-middle text-end">{price}</td>
                             </tr>
                         ))}
                     </tbody>

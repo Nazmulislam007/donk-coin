@@ -1,8 +1,10 @@
-import React from 'react';
-import Cards from '../components/stack/Cards';
-import GraphSection from '../components/stack/GraphSection';
+import React, { useState } from 'react';
+import Cards from '../components/stake/Cards';
+import GraphSection from '../components/stake/GraphSection';
 
 export default function Stake() {
+    const [activeBtn, setActiveBtn] = useState('USD');
+
     return (
         <div className="bg-pink100 dark:bg-dark500 pt-5 pb-14 min-h-[80vh]">
             <section className="max-w-6xl w-[90%] mx-auto">
@@ -15,11 +17,22 @@ export default function Stake() {
                             Stake your DONK tokens and earn more.
                         </p>
                     </div>
-                    <ul className="flex items-center font-medium px-1 py-1 rounded-md border border-pink900 text-pink900 w-fit dark:text-dark900 dark:border-dark900">
-                        <li className="py-1 px-2 bg-pink900 dark:bg-dark900 text-white rounded-md cursor-pointer">
-                            USD
-                        </li>
-                        <li className="py-1 px-2 rounded-md cursor-pointer">DONK</li>
+                    <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-md border border-pink900 text-pink900 w-fit dark:text-dark900 dark:border-dark900">
+                        {['USD', 'DONK'].map((currency) => (
+                            <li key={currency}>
+                                <button
+                                    type="button"
+                                    className={`py-1 px-2 hover:bg-pink900 dark:hover:bg-darkHover hover:text-white rounded-md ${
+                                        activeBtn === currency
+                                            ? 'bg-pink900 dark:bg-darkHover text-white'
+                                            : ''
+                                    }`}
+                                    onClick={() => setActiveBtn(currency)}
+                                >
+                                    {currency}
+                                </button>
+                            </li>
+                        ))}
                     </ul>
                 </header>
                 <GraphSection />

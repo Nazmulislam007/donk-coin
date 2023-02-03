@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { bitcoin, solona, updownarrow } from '../../assets';
 import ExChangeBtn from './ExChangeBtn';
 import Settings from './Settings';
 
-export default function SwipBox() {
-    const [flipBtn, setFlipBtn] = useState(false);
-
+export default function SwipBox({ flipBtn, setFlipBtn }) {
     return (
         <div className="basis-full mt-8 lg:mt-0">
             <Settings />

@@ -16,7 +16,11 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 const options = {
     responsive: true,
-    aspectRatio: 2 / 0.75,
+    maintainAspectRatio: false,
+    interaction: {
+        intersect: false,
+        mode: 'index',
+    },
     plugins: {
         legend: {
             display: false,
@@ -24,12 +28,36 @@ const options = {
         title: {
             display: false,
         },
+        tooltips: {
+            callbacks: (tooltipItems) => {
+                let sum = 0;
+
+                tooltipItems.forEach((tooltipItem) => {
+                    console.log(tooltipItem);
+                    sum += tooltipItem.parsed.y;
+                });
+                return `Sum: ${sum}`;
+            },
+        },
     },
     scales: {
         y: {
+            min: 200,
+            max: 800,
             ticks: {
                 maxTicksLimit: 5,
-                stepSize: 250,
+                stepSize: 100,
+            },
+            grid: {
+                display: false,
+            },
+        },
+        x: {
+            grid: {
+                display: false,
+            },
+            ticks: {
+                maxTicksLimit: 5,
             },
         },
     },
@@ -47,30 +75,34 @@ const data = {
     datasets: [
         {
             label: 'Dataset 1',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+            data: labels.map(() => faker.datatype.number({ min: 400, max: 700 })),
             borderColor: '#1E6327',
             backgroundColor: '#fff',
+            pointRadius: 0,
             borderWidth: 1,
         },
         {
             label: 'Dataset 2',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+            data: labels.map(() => faker.datatype.number({ min: 400, max: 700 })),
             borderColor: '#3CC346',
             backgroundColor: '#fff',
+            pointRadius: 0,
             borderWidth: 1,
         },
         {
             label: 'Dataset 3',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+            data: labels.map(() => faker.datatype.number({ min: 400, max: 700 })),
             backgroundColor: '#fff',
             borderColor: '#1492BC',
+            pointRadius: 0,
             borderWidth: 1,
         },
         {
             label: 'Dataset 4',
-            data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+            data: labels.map(() => faker.datatype.number({ min: 400, max: 700 })),
             backgroundColor: '#fff',
             borderColor: '#6D8DBC',
+            pointRadius: 0,
             borderWidth: 1,
         },
     ],
@@ -78,7 +110,7 @@ const data = {
 
 export default function LineGraph() {
     return (
-        <div className="lg:mt-32 mt-10 w-[95%]">
+        <div className="lg:mt-16 mt-10 w-[95%] inline-block relative h-80 mx-auto">
             <Line options={options} data={data} />
         </div>
     );

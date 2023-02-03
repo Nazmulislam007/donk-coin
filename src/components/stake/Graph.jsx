@@ -47,8 +47,7 @@ function getGradient(ctx, chartArea) {
 
 const options = {
     responsive: true,
-    backgroundColor: 'red',
-    aspectRatio: 2 / 0.7,
+    maintainAspectRatio: false,
     interaction: {
         intersect: false,
         mode: 'index',
@@ -123,7 +122,8 @@ const data = {
                 return getGradient(ctx, chartArea);
             },
             pointRadius: 0,
-            borderWidth: 0,
+            borderWidth: 1,
+            borderColor: 'hsl(22, 100%, 60%, 1)',
             fill: true,
         },
     ],
@@ -131,7 +131,7 @@ const data = {
 
 export default function Graph() {
     return (
-        <div className="mb-2 mt-4">
+        <div className="mb-2 mt-4 w-full relative inline-block md:h-[340px] h-[220px]">
             <Line options={options} data={data} />
         </div>
     );

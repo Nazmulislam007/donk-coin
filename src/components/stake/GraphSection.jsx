@@ -5,18 +5,18 @@ export default function GraphSection() {
     const [activeBtn, setActiveBtn] = useState('4H');
 
     return (
-        <section className="basis-full">
+        <section>
             <header
                 className="flex items-center justify-between gap-2 flex-wrap
             "
             >
                 <div>
-                    <p className="font-semibold text-sm text-pink900 mb-1 dark:text-dark900">
+                    <p className="font-semibold text-sm text-pink900 mb-1  dark:text-dark900">
                         TVL (Total Value Locked)
                     </p>
-                    <p className="text-2xl font-semibold dark:text-white">$86,029,43</p>
+                    <p className="text-2xl font-semibold  dark:text-white">$86,029,43</p>
                 </div>
-                <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-md border border-pink900 dark:border-dark900 text-pink900 dark:text-dark900 w-fit">
+                <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-md border border-pink900 text-pink900 w-fit dark:text-dark900 dark:border-dark900">
                     {['5m', '15m', '1H', '4H'].map((duration) => (
                         <li key={duration}>
                             <button
