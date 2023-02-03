@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import { connect, phantom } from '../assets';
-import { useConnectWallet } from '../context/ConnectWalletProvider';
+import { useStaticStates } from '../context/StaticStatesProvider';
 
 export default function ConnectWallet() {
-    const { connectWalletFn, connectWallet } = useConnectWallet();
+    const { connectWalletFn, connectWallet } = useStaticStates();
 
     return (
         <>

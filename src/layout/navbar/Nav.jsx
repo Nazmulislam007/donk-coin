@@ -5,7 +5,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { logo } from '../../assets';
-import { useConnectWallet } from '../../context/ConnectWalletProvider';
+import { useStaticStates } from '../../context/StaticStatesProvider';
 import DropDownList from './DropDownList';
 import NavItems from './NavItems';
 
@@ -13,7 +13,7 @@ export default function Nav() {
     const [dark, setDark] = useState('light');
     const inverse = dark === 'light' ? 'dark' : 'light';
 
-    const { connectWalletFn } = useConnectWallet();
+    const { connectWalletFn } = useStaticStates();
 
     useEffect(() => {
         const root = window.document.documentElement;

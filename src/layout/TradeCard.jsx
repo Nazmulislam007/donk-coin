@@ -1,7 +1,7 @@
 import React from 'react';
-import { logo } from '../../assets';
+import { logo } from '../assets';
 
-export default function TradeCard() {
+export default function TokenCard() {
     return (
         <div className="flex items-center gap-2 py-2 px-[6px] hover:bg-pink100 dark:hover:bg-darkHover rounded-xl cursor-pointer">
             <img src={logo} alt="logo" width="60" />

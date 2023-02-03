@@ -1,11 +1,13 @@
 import { useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Footer from './components/Footer';
-import Nav from './components/navbar/Nav';
 import ConnectWallet from './layout/ConnectWallet';
+import Footer from './layout/Footer';
+import Nav from './layout/navbar/Nav';
+import SelectTokens from './layout/SelectTokens';
 import Farm from './pages/Farm';
 import Home from './pages/Home';
+import LPtoken from './pages/LPtoken';
 import ManageFarm from './pages/ManageFarm';
 import NFTs from './pages/NFTs';
 import Pool from './pages/Pool';
@@ -54,10 +56,12 @@ function App() {
             <Wrapper>
                 <Nav />
                 <ConnectWallet />
+                <SelectTokens />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/trade" element={<Trade />} />
                     <Route path="/pool" element={<Pool />} />
+                    <Route path="/pool/lp-token" element={<LPtoken />} />
                     <Route path="/stake" element={<Stake />} />
                     <Route path="/stake/token" element={<Token />} />
                     <Route path="/farm" element={<Farm />} />

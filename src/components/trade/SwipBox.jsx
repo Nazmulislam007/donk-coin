@@ -9,11 +9,17 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
             <Settings />
 
             <form className="p-8 sm:px-12 bg-white dark:bg-dark400 rounded-2xl lg:mt-16 mt-8">
-                {flipBtn ? (
-                    <ExChangeBtn img={bitcoin} name="Bitcoin" />
-                ) : (
-                    <ExChangeBtn img={solona} name="Solona" />
-                )}
+                <div className="flex items-center justify-between">
+                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
+                        From
+                        <span>0.0</span>
+                    </div>
+                    {flipBtn ? (
+                        <ExChangeBtn img={bitcoin} name="Bitcoin" />
+                    ) : (
+                        <ExChangeBtn img={solona} name="Solona" />
+                    )}
+                </div>
                 <div className="w-full relative h-[1px] bg-black dark:bg-white my-12">
                     <button
                         type="button"
@@ -23,11 +29,17 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                         <img src={updownarrow} alt="arrow" />
                     </button>
                 </div>
-                {!flipBtn ? (
-                    <ExChangeBtn img={bitcoin} name="Bitcoin" />
-                ) : (
-                    <ExChangeBtn img={solona} name="Solona" />
-                )}
+                <div className="flex items-center justify-between">
+                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
+                        To
+                        <span>0.0</span>
+                    </div>
+                    {!flipBtn ? (
+                        <ExChangeBtn img={bitcoin} name="Bitcoin" />
+                    ) : (
+                        <ExChangeBtn img={solona} name="Solona" />
+                    )}
+                </div>
                 <button
                     type="button"
                     className="bg-orange500 w-[80%] mt-8 mx-[10%] text-white py-2.5 rounded-full"

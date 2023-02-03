@@ -1,8 +1,8 @@
 import React from 'react';
-import { useConnectWallet } from '../context/ConnectWalletProvider';
+import { useStaticStates } from '../context/StaticStatesProvider';
 
 export default function ConnectWalletBtn({ removeCreatePool }) {
-    const { connectWalletFn } = useConnectWallet();
+    const { connectWalletFn } = useStaticStates();
 
     const handleClick = () => {
         connectWalletFn(true);

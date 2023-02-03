@@ -56,7 +56,10 @@ export default function ManageStakeUnstake() {
                         <p className="dark:text-darkText">0</p>
                     </div>
                     <div className="fic justify-between px-1 mt-5 relative">
-                        <Link to="/" className="font-medium dark:text-darkText hover:underline">
+                        <Link
+                            to="/pool/lp-token"
+                            className="font-medium dark:text-darkText hover:underline"
+                        >
                             Get LP Token <ArrowForwardIcon style={{ fontSize: '15px' }} />
                         </Link>
                         <Settings />

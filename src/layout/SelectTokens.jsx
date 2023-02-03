@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useState } from 'react';
-import TradeCards from './TradeCards';
+import { useStaticStates } from '../context/StaticStatesProvider';
+import TokenCard from './TradeCard';
 
-export default function SwipOptions({ showSwipOptions, setShowSwipOptions }) {
+export default function SelectTokens() {
+    const { showSelectTokens, showSelectTokensFn } = useStaticStates();
     const [activeBtn, setActiveBtn] = useState('Solona');
 
     return (
@@ -11,13 +13,13 @@ export default function SwipOptions({ showSwipOptions, setShowSwipOptions }) {
             <button
                 type="button"
                 className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000005d] backdrop-blur-sm z-[99] ${
-                    showSwipOptions ? 'fixed' : 'hidden'
+                    showSelectTokens !== '' ? 'fixed' : 'hidden'
                 }`}
-                onClick={() => setShowSwipOptions(false)}
+                onClick={() => showSelectTokensFn('')}
             />
             <div
                 className={`${
-                    showSwipOptions ? 'fixed' : 'hidden'
+                    showSelectTokens !== '' ? 'fixed' : 'hidden'
                 } left-1/2 top-1/2 w-[95%] max-w-[520px] z-[100] -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-dark300 py-8 rounded-3xl`}
             >
                 <div className="w-[90%] mx-auto">
@@ -26,7 +28,7 @@ export default function SwipOptions({ showSwipOptions, setShowSwipOptions }) {
                         <button
                             type="button"
                             className="font-semibold text-xl p-2 rounded-full border w-10 h-10 leading-[10px] dark:text-white"
-                            onClick={() => setShowSwipOptions(false)}
+                            onClick={() => showSelectTokensFn('')}
                         >
                             x
                         </button>
@@ -65,7 +67,15 @@ export default function SwipOptions({ showSwipOptions, setShowSwipOptions }) {
                         </ul>
                     </div>
 
-                    <TradeCards />
+                    <div className="overflow-y-auto h-[400px]">
+                        <TokenCard />
+                        <TokenCard />
+                        <TokenCard />
+                        <TokenCard />
+                        <TokenCard />
+                        <TokenCard />
+                        <TokenCard />
+                    </div>
                 </div>
             </div>
         </>

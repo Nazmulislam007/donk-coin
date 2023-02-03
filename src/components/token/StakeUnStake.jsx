@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { bitcoin, litecoin } from '../../assets';
+import AmountInput from '../../layout/AmountInput';
 import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
-import AmountInput from './AmountInput';
 
 export default function StakeUnStake() {
     const [stakeUnStake, setStakeUnStake] = useState('Stake');

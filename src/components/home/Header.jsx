@@ -3,7 +3,7 @@ import { a, b, c } from '../../assets';
 
 export default function Header() {
     return (
-        <header className="bg-pink100 dark:bg-dark500 md:py-32 py-16">
+        <header className="bg-pink100 dark:bg-dark500 md:py-32 pb-16 pt-20">
             <div className="max-w-6xl w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-10 justify-items-center mb-24">
                 <figure>
                     <img
@@ -19,7 +19,7 @@ export default function Header() {
                         className="max-w-[160px] hover:scale-110 duration-300 transition-all"
                     />
                 </figure>
-                <figure className="row-[2/-1]">
+                <figure className="row-start-1 row-end-2">
                     <img
                         src={c}
                         alt="coin"
