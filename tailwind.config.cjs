@@ -10,7 +10,7 @@ module.exports = {
             },
             colors: {
                 pink100: 'hsl(22, 24%, 93%)',
-                pink900: 'hsl(18, 11%, 55%)',
+                pink900: '#736666',
                 orange500: 'hsl(22, 100%, 65%)',
                 orange900: 'hsl(41, 80%, 47%)',
 
@@ -18,7 +18,7 @@ module.exports = {
                 dark400: 'hsl(236, 19%, 15%)',
                 dark500: 'hsl(240, 19%, 12%)',
                 dark700: 'hsl(234, 18%, 34%)',
-                dark900: 'hsl(227, 10%, 37%)',
+                dark900: '#9B9BB0',
                 darkHover: 'hsl(234, 18%, 34%)',
                 darkText: 'hsl(231, 50%, 92%)',
 
