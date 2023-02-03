@@ -1,8 +1,8 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ConnectBtn from '../token/ConnectBtn';
+import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
+import Settings from './Settings';
 
 export default function ManageStakeUnstake() {
     const [stakeUnStake, setStakeUnStake] = useState('Stake');
@@ -13,8 +13,10 @@ export default function ManageStakeUnstake() {
                 <button
                     type="button"
                     className={`${
-                        stakeUnStake === 'Stake' ? 'border-black dark:border-darkText' : ''
-                    } text-center flex-1 pb-3 pt-5 border-b-2`}
+                        stakeUnStake === 'Stake'
+                            ? 'border-black dark:border-darkText border-b-2'
+                            : ''
+                    } text-center flex-1 pb-3 pt-5`}
                     onClick={() => setStakeUnStake('Stake')}
                 >
                     Stake
@@ -22,8 +24,10 @@ export default function ManageStakeUnstake() {
                 <button
                     type="button"
                     className={`${
-                        stakeUnStake === 'Unstake' ? 'border-black dark:border-darkText' : ''
-                    } text-center flex-1 pb-3 pt-5 border-b-2`}
+                        stakeUnStake === 'Unstake'
+                            ? 'border-black dark:border-darkText border-b-2'
+                            : ''
+                    } text-center flex-1 pb-3 pt-5`}
                     onClick={() => setStakeUnStake('Unstake')}
                 >
                     Unstake
@@ -51,20 +55,15 @@ export default function ManageStakeUnstake() {
                         <p className="text-sm font-medium dark:text-darkText">LP Token Balance</p>
                         <p className="dark:text-darkText">0</p>
                     </div>
-                    <div className="fic justify-between px-1 mt-5">
+                    <div className="fic justify-between px-1 mt-5 relative">
                         <Link to="/" className="font-medium dark:text-darkText hover:underline">
                             Get LP Token <ArrowForwardIcon style={{ fontSize: '15px' }} />
                         </Link>
-                        <button
-                            type="button"
-                            className="flex items-center p-2 rounded-full gap-2 font-medium dark:text-white w-max"
-                        >
-                            <SettingsIcon />
-                        </button>
+                        <Settings />
                     </div>
                 </div>
                 <div className="mt-10">
-                    <ConnectBtn />
+                    <ConnectWalletBtn />
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ export default function ConnectWallet() {
         <>
             <button
                 type="button"
-                className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000004b] blur-3xl z-8 ${
+                className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000004b] backdrop-blur-sm z-8 ${
                     connectWallet ? 'fixed' : 'hidden'
                 }`}
                 onClick={() => connectWalletFn(false)}
@@ -18,7 +18,7 @@ export default function ConnectWallet() {
             <div
                 className={`${
                     connectWallet ? 'fixed' : 'hidden'
-                } left-1/2 top-1/2 w-full max-w-[600px] z-10 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black500 px-8 py-16 rounded-3xl`}
+                } left-1/2 top-1/2 w-[95%] max-w-[600px] z-10 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black500 px-8 py-16 rounded-3xl`}
             >
                 <div className="md:w-[80%] w-full mx-auto">
                     <header className="mb-9">

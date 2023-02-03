@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { bitcoin, litecoin } from '../../assets';
+import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
 import AmountInput from './AmountInput';
-import ConnectBtn from './ConnectBtn';
 
 export default function StakeUnStake() {
     const [stakeUnStake, setStakeUnStake] = useState('Stake');
@@ -12,8 +12,10 @@ export default function StakeUnStake() {
                 <button
                     type="button"
                     className={`${
-                        stakeUnStake === 'Stake' ? 'border-black dark:border-darkText' : ''
-                    } text-center flex-1 pb-2.5 border-b-2`}
+                        stakeUnStake === 'Stake'
+                            ? 'border-black dark:border-darkText border-b-2'
+                            : ''
+                    } text-center flex-1 pb-2.5`}
                     onClick={() => setStakeUnStake('Stake')}
                 >
                     Stake
@@ -21,8 +23,10 @@ export default function StakeUnStake() {
                 <button
                     type="button"
                     className={`${
-                        stakeUnStake === 'Unstake' ? 'border-black dark:border-darkText' : ''
-                    } text-center flex-1 pb-2.5 border-b-2`}
+                        stakeUnStake === 'Unstake'
+                            ? 'border-black dark:border-darkText border-b-2'
+                            : ''
+                    } text-center flex-1 pb-2.5`}
                     onClick={() => setStakeUnStake('Unstake')}
                 >
                     Unstake
@@ -30,7 +34,7 @@ export default function StakeUnStake() {
             </div>
             <div className="sm:px-8 px-4">
                 <AmountInput />
-                <ConnectBtn />
+                <ConnectWalletBtn />
             </div>
             <div className="grid grid-cols-2 gap-x-2 gap-y-8 mt-12 py-10 sm:px-8 px-4 bg-white dark:bg-dark300 dark:text-darkText rounded-2xl">
                 <div className="font-semibold col-span-2 sm:col-span-1">
@@ -48,7 +52,7 @@ export default function StakeUnStake() {
                     </div>
                 </div>
                 <div className="col-span-2">
-                    <ConnectBtn />
+                    <ConnectWalletBtn />
                 </div>
             </div>
         </section>

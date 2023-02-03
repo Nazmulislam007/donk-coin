@@ -15,7 +15,7 @@ export default function Footer() {
                         for troubleshooting
                     </li> */}
                     <li className="mb-5 text-sm font-medium">
-                        Join for{' '}
+                        Join{' '}
                         <a
                             target="_blank"
                             href="https://discord.gg/c5SnGZWUF8"
@@ -24,7 +24,7 @@ export default function Footer() {
                         >
                             our official Discord
                         </a>{' '}
-                        dedicated support
+                        for dedicated support
                     </li>
                     <li className="mb-5">
                         <ul className="flex items-center gap-3 justify-between w-full">

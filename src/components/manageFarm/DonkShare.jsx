@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function DonkShare() {
     return (
-        <section className="grid sm:grid-cols-2 gap-3 mb-8">
+        <section className="grid grid-cols-2 gap-3 mb-8">
             <div>
                 <p className="text-[15px] font-medium text-pink900 mb-[2px] dark:text-dark900">
                     Your DONK share

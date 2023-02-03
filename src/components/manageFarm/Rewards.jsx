@@ -13,7 +13,7 @@ export default function Rewards() {
                 </div>
                 <p className="text-gray-600 dark:text-darkText">$0.00</p>
             </div>
-            <button className="bg-orange500 text-white w-full py-[14px] rounded-2xl custom-shadow font-semibold mt-8">
+            <button className="bg-orange500 text-white w-full py-[14px] rounded-2xl custom-shadow font-semibold mt-8 hover:bg-[#ff8138]">
                 Harvast
             </button>
         </div>

@@ -24,8 +24,7 @@ export default function ManageFarm() {
                         <img
                             src={c}
                             alt="c"
-                            width={170}
-                            className="absolute right-1 top-1/2 -translate-y-1/2"
+                            className="absolute right-1 top-1/2 -translate-y-1/2 w-44 max-sm:hidden"
                         />
                     </div>
                 </header>

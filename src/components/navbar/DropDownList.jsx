@@ -30,7 +30,7 @@ export default function DropDownList() {
                 </svg>
             </button>
             {showList && (
-                <div className="z-10 absolute left-0 top-[115%] bg-white dark:bg-dark700 rounded-lg shadow min-w-[220px]">
+                <div className="z-10 absolute left-0 top-[115%] bg-white dark:bg-dark700 rounded-lg shadow min-w-[180px]">
                     <ul className="p-2 text-sm">
                         <li className="flex items-center gap-3 px-4 py-2 dark:text-white hover:bg-dark700 dark:hover:bg-dark500 hover:text-white rounded-lg">
                             <img src={solona} alt="salena" height="27" width="27" />

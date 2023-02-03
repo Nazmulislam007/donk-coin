@@ -17,7 +17,7 @@ export default function AmountInput() {
                 className="fic gap-2 bg-white py-2 px-3 rounded-lg ml-1 dark:bg-dark300 dark:text-darkText"
             >
                 <img src={litecoin} alt="litecoin" width={25} />
-                <p className="font-semibold text-sm">Bitcoin</p>
+                <p className="font-semibold text-sm">Litecoin</p>
             </button>
         </label>
     );

@@ -48,6 +48,7 @@ export default function NavItems() {
                         <Link
                             to="/farm"
                             className="mt-3 block py-2 px-3 w-full rounded-md hover:bg-pink100 dark:bg-dark400 dark:text-dark900 text-start"
+                            onClick={() => setToggle(false)}
                         >
                             Farm
                         </Link>
