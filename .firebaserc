@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "donk-coin"
-  }
+    "default": "donk-coin",
+    "production": "donk-coin-e36c7"
+  },
+  "targets": {},
+  "etags": {}
 }

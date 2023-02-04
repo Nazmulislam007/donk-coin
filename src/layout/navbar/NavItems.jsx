@@ -7,7 +7,7 @@ export default function NavItems() {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <ul className="max-md:fixed z-50 max-md:bg-white max-md:w-full max-md:bottom-0 max-md:left-0 justify-around flex items-center md:gap-10 text-pink900 font-medium dark:text-dark900 max-md:dark:bg-dark400">
+        <ul className="max-md:fixed z-10 max-md:bg-white max-md:w-full max-md:bottom-0 max-md:left-0 justify-around flex items-center md:gap-10 text-pink900 font-medium dark:text-dark900 max-md:dark:bg-dark400">
             <Link
                 className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-[#cdcdcd6a] transition-all basis-full max-md:py-3 text-center"
                 to="/trade"

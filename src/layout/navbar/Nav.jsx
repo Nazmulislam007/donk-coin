@@ -3,17 +3,17 @@ import BackupTableOutlinedIcon from '@mui/icons-material/BackupTableOutlined';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logo } from '../../assets';
-import { useStaticStates } from '../../context/StaticStatesProvider';
+import { showConnectWallet } from '../../feature/wallet/walletSlice';
 import DropDownList from './DropDownList';
 import NavItems from './NavItems';
 
 export default function Nav() {
+    const dispatch = useDispatch();
     const [dark, setDark] = useState('light');
     const inverse = dark === 'light' ? 'dark' : 'light';
-
-    const { connectWalletFn } = useStaticStates();
 
     useEffect(() => {
         const root = window.document.documentElement;
@@ -42,7 +42,7 @@ export default function Nav() {
                     <button
                         type="button"
                         className="flex items-center gap-3 bg-white dark:bg-dark700 lg:px-5 px-2 max-lg:py-2 py-[8.1px] rounded-full dark:text-white"
-                        onClick={() => connectWalletFn(true)}
+                        onClick={() => dispatch(showConnectWallet(true))}
                     >
                         <BackupTableOutlinedIcon />
                         <span className="text-sm font-semibold lg:block hidden">Wallet Connet</span>

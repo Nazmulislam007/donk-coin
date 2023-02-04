@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import StaticStatesProvider from './context/StaticStatesProvider';
+import store from './app/store';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>
-            <StaticStatesProvider>
+            <Provider store={store}>
                 <App />
-            </StaticStatesProvider>
+            </Provider>
         </BrowserRouter>
     </React.StrictMode>
 );

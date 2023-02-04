@@ -12,7 +12,7 @@ export default function PoolDropDown() {
     return (
         <div className="relative">
             <button
-                className="bg-white dark:bg-dark700 dark:text-white font-medium rounded-3xl text-sm sm:px-5 px-3 sm:py-3 py-2 text-center inline-flex items-center"
+                className="bg-white dark:bg-dark700 dark:text-white font-medium rounded-3xl text-sm sm:px-5 px-3 sm:py-3 py-2 text-center inline-flex items-center min-w-max"
                 type="button"
                 onClick={() => setShowList(!showList)}
             >

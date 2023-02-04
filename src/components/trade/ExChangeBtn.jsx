@@ -1,19 +1,29 @@
 import React from 'react';
-import { useStaticStates } from '../../context/StaticStatesProvider';
+import { useDispatch } from 'react-redux';
 
-export default function ExChangeBtn({ img, name }) {
-    const { showSelectTokens, showSelectTokensFn } = useStaticStates();
+export default function ExChangeBtn({ img, name, setToggle, toggle }) {
+    const dispatch = useDispatch();
 
     return (
         <button
             className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center"
             type="button"
-            onClick={() => showSelectTokensFn(name)}
+            onClick={() => dispatch(setToggle())}
         >
-            <img src={img} alt="salena" height="27" width="27" className="mr-3" />
-            <span className="mr-5 font-semibold">{name}</span>
+            {img && (
+                <img
+                    src={`/src/assets/${img}`}
+                    alt="salena"
+                    className="mr-3 w-[27px] rounded-full"
+                />
+            )}
+            {name ? (
+                <span className="font-semibold">{name}</span>
+            ) : (
+                <span className="mr-2 py-1 font-medium">Select token</span>
+            )}
             <svg
-                className={`w-4 h-4 ml-2 ${showSelectTokens === name ? 'rotate-180' : ''}`}
+                className={`w-4 h-4 ml-2 ${toggle ? 'rotate-180' : ''}`}
                 aria-hidden="true"
                 fill="none"
                 stroke="currentColor"

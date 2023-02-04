@@ -1,24 +1,26 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { connect, phantom } from '../assets';
-import { useStaticStates } from '../context/StaticStatesProvider';
+import { showConnectWallet } from '../feature/wallet/walletSlice';
 
 export default function ConnectWallet() {
-    const { connectWalletFn, connectWallet } = useStaticStates();
+    const dispatch = useDispatch();
+    const { showWallet } = useSelector((state) => state.wallet);
 
     return (
         <>
             <button
                 type="button"
-                className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000004b] backdrop-blur-sm z-8 ${
-                    connectWallet ? 'fixed' : 'hidden'
+                className={`left-0 top-0 w-full h-[100vh] bg-[#ffffff50] dark:bg-[#0000004b] backdrop-blur-sm z-10 ${
+                    showWallet ? 'fixed' : 'hidden'
                 }`}
-                onClick={() => connectWalletFn(false)}
+                onClick={() => dispatch(showConnectWallet(false))}
             />
             <div
                 className={`${
-                    connectWallet ? 'fixed' : 'hidden'
-                } left-1/2 top-1/2 w-[95%] max-w-[600px] z-10 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black500 px-8 py-16 rounded-3xl`}
+                    showWallet ? 'fixed' : 'hidden'
+                } left-1/2 top-1/2 w-[95%] max-w-[600px] z-[11] -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-black500 px-8 py-16 rounded-3xl`}
             >
                 <div className="md:w-[80%] w-full mx-auto">
                     <header className="mb-9">

@@ -1,91 +1,92 @@
 import React from 'react';
-import { bitcoin, etherium, litecoin, solona, terra } from '../../assets';
+import { useSelector } from 'react-redux';
 import TradTableRow from './TradTableRow';
 
 export default function TradTable() {
-    const tradInfo = [
-        {
-            no: 1,
-            icon: terra,
-            name: 'Terra',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 2,
-            icon: bitcoin,
-            name: 'Bitcoin',
-            volume: '$345,564,839',
-            price: '$23,050',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 3,
-            icon: litecoin,
-            name: 'Litecoin',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 4,
-            icon: solona,
-            name: 'Solana',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 5,
-            icon: etherium,
-            name: 'Etherium',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 6,
-            icon: litecoin,
-            name: 'Litecoin',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 7,
-            icon: terra,
-            name: 'Terra',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 8,
-            icon: terra,
-            name: 'Terra',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-        {
-            no: 9,
-            icon: terra,
-            name: 'Terra',
-            volume: '$345,564,839',
-            price: '$67',
-            _24H: '24.45%',
-            _7D: '7.90%',
-        },
-    ];
+    // const tradInfo = [
+    //     {
+    //         no: 1,
+    //         icon: terra,
+    //         name: 'Terra',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 2,
+    //         icon: bitcoin,
+    //         name: 'Bitcoin',
+    //         volume: '$345,564,839',
+    //         price: '$23,050',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 3,
+    //         icon: litecoin,
+    //         name: 'Litecoin',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 4,
+    //         icon: solona,
+    //         name: 'Solana',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 5,
+    //         icon: etherium,
+    //         name: 'Etherium',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 6,
+    //         icon: litecoin,
+    //         name: 'Litecoin',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 7,
+    //         icon: terra,
+    //         name: 'Terra',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 8,
+    //         icon: terra,
+    //         name: 'Terra',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    //     {
+    //         no: 9,
+    //         icon: terra,
+    //         name: 'Terra',
+    //         volume: '$345,564,839',
+    //         price: '$67',
+    //         _24H: '24.45%',
+    //         _7D: '7.90%',
+    //     },
+    // ];
+    const { tokens } = useSelector((state) => state.token);
 
     return (
         <div className="bg-pink100 dark:bg-dark500 py-20">
@@ -95,10 +96,10 @@ export default function TradTable() {
                     <table className="table-auto min-w-[800px] w-full">
                         <thead>
                             <tr>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-start px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
                                     #
                                 </th>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-start px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
                                     TOKEN
                                 </th>
                                 <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
@@ -116,8 +117,8 @@ export default function TradTable() {
                             </tr>
                         </thead>
                         <tbody>
-                            {tradInfo.map((rowData) => (
-                                <TradTableRow rowData={rowData} key={rowData.no} />
+                            {tokens.map((rowData) => (
+                                <TradTableRow rowData={rowData} key={rowData.uuid} />
                             ))}
                         </tbody>
                     </table>

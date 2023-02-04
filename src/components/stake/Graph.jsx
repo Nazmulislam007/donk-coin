@@ -59,17 +59,7 @@ const options = {
         title: {
             display: false,
         },
-        tooltips: {
-            callbacks: (tooltipItems) => {
-                let sum = 0;
-
-                tooltipItems.forEach((tooltipItem) => {
-                    console.log(tooltipItem);
-                    sum += tooltipItem.parsed.y;
-                });
-                return `Sum: ${sum}`;
-            },
-        },
+        tooltip: {},
     },
     scales: {
         y: {

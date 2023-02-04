@@ -1,11 +1,12 @@
 import React from 'react';
-import { useStaticStates } from '../context/StaticStatesProvider';
+import { useDispatch } from 'react-redux';
+import { showConnectWallet } from '../feature/wallet/walletSlice';
 
 export default function ConnectWalletBtn({ removeCreatePool }) {
-    const { connectWalletFn } = useStaticStates();
+    const dispatch = useDispatch();
 
     const handleClick = () => {
-        connectWalletFn(true);
+        dispatch(showConnectWallet(true));
         removeCreatePool(false);
     };
 
