@@ -1,5 +1,5 @@
 import React from 'react';
-import Graph from './Graph';
+import RechartGraph from '../stake/RechartGraph';
 import RemittancesTable from './RemittancesTable';
 
 export default function Overview() {
@@ -47,7 +47,9 @@ export default function Overview() {
             </header>
             <div>
                 <p className="font-semibold dark:text-white text-xl">Total Staked</p>
-                <Graph />
+                <div className="my-5 sm:h-[280px] h-[200px]">
+                    <RechartGraph />
+                </div>
             </div>
             <RemittancesTable />
         </section>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Graph from './Graph';
+import RechartGraph from './RechartGraph';
 
 export default function GraphSection() {
     const [activeBtn, setActiveBtn] = useState('4H');
@@ -34,7 +34,10 @@ export default function GraphSection() {
                     ))}
                 </ul>
             </header>
-            <Graph />
+            {/* <Graph /> */}
+            <div className="my-5 sm:h-[300px] h-[200px]">
+                <RechartGraph />
+            </div>
         </section>
     );
 }

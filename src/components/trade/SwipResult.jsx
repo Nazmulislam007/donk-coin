@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import LineGraph from './LineGraph';
+import RechartGraph from './RechartGraph';
 
 export default function SwipResult({ flipBtn }) {
     const { swip, to } = useSelector((state) => state.token);
@@ -10,7 +10,7 @@ export default function SwipResult({ flipBtn }) {
         <div className="basis-full">
             {swip.selected && to.selected ? (
                 <>
-                    <header className="grid grid-cols-2 gap-3">
+                    <header className="grid grid-cols-2 gap-3 mb-14 ">
                         <div
                             className={`flex items-center gap-3 max-xl:col-span-2 ${
                                 flipBtn ? 'flex-row-reverse justify-end' : ''
@@ -59,7 +59,9 @@ export default function SwipResult({ flipBtn }) {
                             $0.0567
                         </div>
                     </header>
-                    <LineGraph />
+                    <div className="my-5 sm:h-[300px] h-[200px]">
+                        <RechartGraph />
+                    </div>
                 </>
             ) : (
                 <div className="flex items-center justify-center h-full py-10">
