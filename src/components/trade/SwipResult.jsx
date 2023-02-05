@@ -18,7 +18,7 @@ export default function SwipResult({ flipBtn }) {
                         >
                             <div className="flex items-center gap-2">
                                 <img
-                                    src={`/src/assets/${swip.selected.icon}`}
+                                    src={`${swip.selected.icon}`}
                                     alt="terra"
                                     className="w-[40px] rounded-full"
                                 />
@@ -29,7 +29,7 @@ export default function SwipResult({ flipBtn }) {
                             <span className="dark:text-white">/</span>
                             <div className="flex items-center gap-2">
                                 <img
-                                    src={`/src/assets/${to.selected.icon}`}
+                                    src={`${to.selected.icon}`}
                                     alt="terra"
                                     className="w-[40px] rounded-full"
                                 />

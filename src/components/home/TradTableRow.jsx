@@ -15,7 +15,7 @@ export default function TradTableRow({ rowData }) {
         >
             <td className="py-5 align-middle text-start pl-5">{uuid}</td>
             <td className="flex items-center justify-start gap-2 py-5 pl-5">
-                <img src={`src/assets/${icon}`} alt="terra" className="w-[25px] rounded-full" />
+                <img src={icon} alt="terra" className="w-[25px] rounded-full" />
                 <span className="uppercase">{symbol}</span>
             </td>
             <td className="py-5 align-middle text-center">${rowData['24hVolume']}</td>

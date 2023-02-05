@@ -18,9 +18,13 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
 
             <form className="p-8 sm:px-12 bg-white dark:bg-dark400 rounded-2xl lg:mt-16 mt-8 max-w-lg ml-auto">
                 <div className="flex items-center justify-between">
-                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
+                    <div className="flex flex-col basis-3/5 font-semibold text-gray-500 text-xl">
                         Swip
-                        <span>0.0</span>
+                        <input
+                            type="number"
+                            className="outline-none text-2xl w-1/2 text-black dark:text-darkText bg-transparent"
+                            placeholder="0.0"
+                        />
                     </div>
                     {flipBtn ? (
                         <ExChangeBtn
@@ -48,9 +52,13 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                     </button>
                 </div>
                 <div className="flex items-center justify-between">
-                    <div className="flex flex-col font-semibold text-gray-500 text-xl">
+                    <div className="flex flex-col basis-3/5  font-semibold text-gray-500 text-xl">
                         To
-                        <span>0.0</span>
+                        <input
+                            type="number"
+                            className="outline-none text-2xl w-1/2 text-black dark:text-darkText bg-transparent"
+                            placeholder="0.0"
+                        />
                     </div>
                     {!flipBtn ? (
                         <ExChangeBtn

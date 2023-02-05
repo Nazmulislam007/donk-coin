@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectSwipToken, selectToToken, setFilter, setHideAll } from '../feature/token/tokenSlice';
 
 export default function TokenCard({ token }) {
+    const childBtnRef = useRef(null);
     const dispatch = useDispatch();
     const { symbol, name, icon, catagorys } = token || {};
 
@@ -22,25 +23,27 @@ export default function TokenCard({ token }) {
                 return true;
             }}
         >
-            <img src={`/src/assets/${icon}`} alt={name} className="w-9 rounded-full" />
+            <img src={icon} alt={name} className="w-9 rounded-full" />
             <header>
                 <div className="flex items-center mb-2 uppercase">
                     <h4 className="font-semibold mr-3 leading-[10px] dark:text-white">{symbol}</h4>
                     <span className="text-sm text-gray-400 leading-[10px]">{name}</span>
                 </div>
-                <ul className="flex items-center gap-3 text-xs text-gray-400 ">
+                <div className="flex items-center gap-3 text-xs text-gray-400" ref={childBtnRef}>
                     {catagorys.map((cata, i) => (
-                        <li key={i}>
-                            <button
-                                type="button"
-                                onClick={() => dispatch(setFilter(cata))}
-                                className="hover:dark:text-darkText hover:underline hover:text-black"
-                            >
-                                {cata}
-                            </button>
-                        </li>
+                        <button
+                            key={i}
+                            type="button"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                dispatch(setFilter(cata));
+                            }}
+                            className="hover:dark:text-darkText hover:underline hover:text-black"
+                        >
+                            {cata}
+                        </button>
                     ))}
-                </ul>
+                </div>
             </header>
         </div>
     );

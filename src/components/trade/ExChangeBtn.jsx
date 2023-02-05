@@ -6,21 +6,15 @@ export default function ExChangeBtn({ img, name, setToggle, toggle }) {
 
     return (
         <button
-            className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center"
+            className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center min-w-[125px]"
             type="button"
             onClick={() => dispatch(setToggle())}
         >
-            {img && (
-                <img
-                    src={`/src/assets/${img}`}
-                    alt="salena"
-                    className="mr-3 w-[27px] rounded-full"
-                />
-            )}
+            {img && <img src={img} alt="salena" className="mr-3 w-[27px] rounded-full" />}
             {name ? (
-                <span className="font-semibold">{name}</span>
+                <span className="font-semibold w-max">{name}</span>
             ) : (
-                <span className="mr-2 py-1 font-medium">Select token</span>
+                <span className="mr-2 py-1 font-medium w-max">Select token</span>
             )}
             <svg
                 className={`w-4 h-4 ml-2 ${toggle ? 'rotate-180' : ''}`}

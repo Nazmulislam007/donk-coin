@@ -18,6 +18,17 @@ import terra from './terra.png';
 import twitter from './twitter.svg';
 import updownarrow from './updownarrow.svg';
 
+import avax from './avax.svg';
+import btcb from './btcb.png';
+import busd from './busd.png';
+import ethereum from './ethereum.png';
+import gmx from './gmx.jpg';
+import steak from './steak.png';
+import usdc from './usdc.png';
+import vtx from './vtx.png';
+import wbtce from './wbtce.png';
+import xava from './xava.png';
+
 export {
     a,
     b,
@@ -38,6 +49,16 @@ export {
     settings,
     twitter,
     updownarrow,
+    avax,
+    btcb,
+    busd,
+    ethereum,
+    gmx,
+    steak,
+    usdc,
+    vtx,
+    wbtce,
+    xava,
 };
 
 //
