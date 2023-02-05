@@ -66,8 +66,8 @@ export default function SelectTokens() {
                                 <li key={i}>
                                     <button
                                         type="button"
-                                        className={`py-2 px-3 hover:bg-pink100 dark:hover:bg-darkHover  ${
-                                            filter === btn ? 'bg-pink100 dark:bg-darkHover' : ''
+                                        className={`py-2 px-3 hover:bg-primary-100 dark:hover:bg-darkHover  ${
+                                            filter === btn ? 'bg-primary-100 dark:bg-darkHover' : ''
                                         } rounded-md`}
                                         onClick={() => dispatch(setFilter(btn))}
                                     >

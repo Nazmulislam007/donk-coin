@@ -14,7 +14,7 @@ export default function ConnectWalletBtn({ removeCreatePool }) {
         <button
             type="button"
             onClick={handleClick}
-            className="bg-orange500 text-white w-full py-[14px] rounded-2xl custom-shadow hover:bg-[#ff8138]"
+            className="bg-accent-400 text-white w-full py-[14px] rounded-2xl custom-shadow hover:bg-accent-hover-400"
         >
             Connect Wallet
         </button>

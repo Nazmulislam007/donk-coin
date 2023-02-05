@@ -7,21 +7,21 @@ export default function NavItems() {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <ul className="max-md:fixed z-10 max-md:bg-white max-md:w-full max-md:bottom-0 max-md:left-0 justify-around flex items-center md:gap-10 text-pink900 font-medium dark:text-dark900 max-md:dark:bg-dark400">
+        <ul className="max-md:fixed z-10 max-md:bg-white max-md:w-full max-md:bottom-0 max-md:left-0 justify-around flex items-center md:gap-10 text-primary-contrast-100 font-medium dark:text-dark900 max-md:dark:bg-dark400">
             <Link
-                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-[#cdcdcd6a] transition-all basis-full max-md:py-3 text-center"
+                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-primary-hover-100 transition-all basis-full max-md:py-3 text-center"
                 to="/trade"
             >
                 Trade
             </Link>
             <Link
-                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-[#cdcdcd6a]  transition-all basis-full max-md:py-3 text-center"
+                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-primary-hover-100  transition-all basis-full max-md:py-3 text-center"
                 to="/pool"
             >
                 Pool
             </Link>
             <Link
-                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-[#cdcdcd6a] transition-all basis-full max-md:py-3 text-center"
+                className="py-[7px] rounded-md dark:hover:bg-[#ececec1b] px-4 hover:bg-primary-hover-100 transition-all basis-full max-md:py-3 text-center"
                 to="/stake"
             >
                 Stake
@@ -30,7 +30,7 @@ export default function NavItems() {
             {/* tablet version */}
             <li className="xl:hidden relative rounded-md  md:dark:hover:bg-[#ececec1b] transition-all basis-full text-center">
                 <button
-                    className="w-full max-md:py-3 px-4 py-[7px] max-md:dark:hover:bg-[#ececec1b] max-md:hover:bg-[#cdcdcd6a] rounded-md"
+                    className="w-full max-md:py-3 px-4 py-[7px] max-md:dark:hover:bg-[#ececec1b] max-md:hover:bg-primary-hover-100 rounded-md"
                     onClick={() => setToggle(!toggle)}
                 >
                     <MoreHorizIcon />
@@ -47,7 +47,7 @@ export default function NavItems() {
                     <li>
                         <Link
                             to="/farm"
-                            className="mt-3 block py-2 px-3 w-full rounded-md hover:bg-pink100 dark:bg-dark400 dark:text-dark900 text-start"
+                            className="mt-3 block py-2 px-3 w-full rounded-md hover:bg-primary-100 dark:bg-dark400 dark:text-dark900 text-start"
                             onClick={() => setToggle(false)}
                         >
                             Farm
@@ -57,7 +57,7 @@ export default function NavItems() {
             </li>
 
             <Link
-                className="hidden xl:block py-[7px] px-4 dark:hover:bg-[#ececec1b] hover:bg-[#cdcdcd6a] transition-all basis-full max-md:py-3 text-center rounded-md"
+                className="hidden xl:block py-[7px] px-4 dark:hover:bg-[#ececec1b] hover:bg-primary-hover-100 transition-all basis-full max-md:py-3 text-center rounded-md"
                 to="/farm"
             >
                 Farm

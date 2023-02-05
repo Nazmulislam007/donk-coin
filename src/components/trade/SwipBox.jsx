@@ -79,7 +79,7 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                 <button
                     type="button"
                     onClick={() => dispatch(showConnectWallet(true))}
-                    className="bg-orange500 w-[80%] mt-8 mx-[10%] text-white py-2.5 rounded-full"
+                    className="bg-accent-400 w-[80%] mt-8 mx-[10%] text-white py-2.5 rounded-full"
                 >
                     Swap
                 </button>

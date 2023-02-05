@@ -12,10 +12,10 @@ export default function SlippageInput() {
     return (
         <article className="px-4 py-2">
             <header className="flex items-center justify-between mb-1">
-                <p className="text-xs font-medium text-pink900 dark:text-[#7d808b]">
+                <p className="text-xs font-medium text-primary-contrast-100 dark:text-[#7d808b]">
                     Normal slippage tolerance (V1)
                 </p>
-                <span className="text-pink900 dark:text-[#777777]">
+                <span className="text-primary-contrast-100 dark:text-[#777777]">
                     <PrivacyTipOutlinedIcon fontSize="20px" />
                 </span>
             </header>
@@ -24,7 +24,7 @@ export default function SlippageInput() {
                     <button
                         className={`px-2 py-2 ${
                             selectPercentage === percentage
-                                ? 'bg-[#ff8945b4] text-white border-none'
+                                ? 'bg-accent-100 text-white border-none'
                                 : ''
                         } rounded-xl border dark:border-dark900`}
                         onClick={() => {

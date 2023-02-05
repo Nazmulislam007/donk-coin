@@ -3,7 +3,7 @@ import { a, b, c } from '../../assets';
 
 export default function Header() {
     return (
-        <header className="bg-pink100 dark:bg-dark500 md:py-32 pb-16 pt-20">
+        <header className="bg-primary-100 dark:bg-dark500 md:py-32 pb-16 pt-20">
             <div className="max-w-6xl w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 gap-10 justify-items-center mb-24">
                 <figure>
                     <img

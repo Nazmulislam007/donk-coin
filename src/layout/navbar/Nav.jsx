@@ -22,7 +22,7 @@ export default function Nav() {
     }, [dark, inverse]);
 
     return (
-        <nav className="bg-pink100 dark:bg-dark500 md:py-6 py-2">
+        <nav className="bg-primary-100 dark:bg-dark500 md:py-6 py-2">
             <div className="flex items-center justify-between gap-3 max-w-7xl mx-auto w-[90%]">
                 <Link to="/" className="h-16 w-16 min-w-[4rem]">
                     <img src={logo} alt="logo" />

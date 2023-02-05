@@ -8,7 +8,7 @@ export default function PoolTableRow({ data }) {
     return (
         <tr
             key={no}
-            className="rounded-lg dark:hover:bg-dark700 hover:bg-[#e8e2de] dark:text-darkText text-sm font-semibold cursor-pointer"
+            className="rounded-lg dark:hover:bg-dark700 hover:bg-primary-hover-100 dark:text-darkText text-sm font-semibold cursor-pointer"
             onClick={() => navigate(`/pool/lp-token`)}
         >
             <td className="flex items-center justify-start pl-6 gap-2 py-5">

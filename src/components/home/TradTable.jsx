@@ -96,22 +96,22 @@ export default function TradTable() {
                     <table className="table-auto min-w-[800px] w-full">
                         <thead>
                             <tr>
-                                <th className="text-start px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-start px-5 pb-[10px] font-medium opacity-40">
                                     #
                                 </th>
-                                <th className="text-start px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-start px-5 pb-[10px] font-medium opacity-40">
                                     TOKEN
                                 </th>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-center px-5 pb-[10px] font-medium opacity-40">
                                     ↓ VOLUME (24H)
                                 </th>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-center px-5 pb-[10px] font-medium opacity-40">
                                     PRICE
                                 </th>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-center px-5 pb-[10px] font-medium opacity-40">
                                     CHANGE (24H)
                                 </th>
-                                <th className="text-center px-5 pb-[10px] font-medium text-[rgb(150,150,150)]">
+                                <th className="text-center px-5 pb-[10px] font-medium opacity-40">
                                     CHANGE (7D)
                                 </th>
                             </tr>

@@ -10,7 +10,7 @@ export default function TradTableRow({ rowData }) {
 
     return (
         <tr
-            className="rounded-lg dark:hover:bg-dark700 hover:bg-[#e8e2de] dark:text-darkText text-sm font-semibold cursor-pointer"
+            className="rounded-lg dark:hover:bg-dark700 hover:bg-primary-hover-100 dark:text-darkText text-sm font-semibold cursor-pointer"
             onClick={() => navigate(`/trade`)}
         >
             <td className="py-5 align-middle text-start pl-5">{uuid}</td>

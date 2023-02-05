@@ -11,7 +11,7 @@ export default function CreatePool() {
             <button
                 type="button"
                 onClick={() => setShowHide(true)}
-                className="py-2 px-4 h-11 border-2 text-pink900 border-pink900 dark:border-dark900 dark:text-darkText rounded-md text-sm max-lg:w-full hover:bg-[#e8e2de] dark:hover:bg-darkHover"
+                className="py-2 px-4 h-11 border-2 text-primary-contrast-100 border-primary-contrast-100 dark:border-dark900 dark:text-darkText rounded-md text-sm max-lg:w-full hover:bg-primary-hover-100 dark:hover:bg-darkHover"
             >
                 Create New Pool
             </button>

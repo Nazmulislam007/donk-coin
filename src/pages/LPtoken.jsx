@@ -9,13 +9,13 @@ export default function LPtoken() {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-pink100 dark:bg-dark500 pt-3 pb-4">
+        <div className="bg-primary-100 dark:bg-dark500 pt-3 pb-4">
             <section className="max-w-6xl w-[90%] mx-auto">
                 <header className="pb-14">
                     <button
                         type="button"
                         onClick={() => navigate(-1)}
-                        className="fic gap-1 font-semibold px-2 py-2 mb-4 text-pink900 dark:text-dark900"
+                        className="fic gap-1 font-semibold px-2 py-2 mb-4 text-primary-contrast-100 dark:text-dark900"
                     >
                         <ArrowBackOutlinedIcon fontSize="10px" />
                         Back to pool list
@@ -27,7 +27,7 @@ export default function LPtoken() {
                         <img src={etherium} alt="etherium" className="w-8 sm:w-10" />
                         <span className="font-semibold text-2xl dark:text-darkText">ETHERIUM</span>
                     </div>
-                    <p className="text-xs mt-2 ml-1 text-pink900 dark:text-dark900">
+                    <p className="text-xs mt-2 ml-1 text-primary-contrast-100 dark:text-dark900">
                         <a
                             target="_blank"
                             href="https://snowtrace.io/address/0xf4003f4efbe8691b60249e6afbd307abe7758adb"

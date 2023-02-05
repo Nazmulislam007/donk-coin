@@ -9,14 +9,14 @@ export default function AddRemoveLiquidity() {
 
     return (
         <section className="flex-1">
-            <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-2xl border border-pink900 text-pink900 w-full dark:text-dark900 dark:border-dark900">
+            <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-2xl border border-primary-contrast-100 text-primary-contrast-100 w-full dark:text-dark900 dark:border-dark900">
                 {['Add Liquidity', 'Remove Liquidity'].map((currency) => (
                     <li key={currency} className="w-full">
                         <button
                             type="button"
                             className={`py-2.5 px-2 rounded-xl w-full ${
                                 activeBtn === currency
-                                    ? 'bg-[#ff8945b4] dark:bg-darkHover text-white'
+                                    ? 'bg-accent-100 dark:bg-darkHover text-white'
                                     : ''
                             }`}
                             onClick={() => setActiveBtn(currency)}

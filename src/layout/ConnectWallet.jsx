@@ -24,7 +24,7 @@ export default function ConnectWallet() {
             >
                 <div className="md:w-[80%] w-full mx-auto">
                     <header className="mb-9">
-                        <h3 className="text-orange900 font-semibold text-2xl text-center mb-3">
+                        <h3 className="text-accent-400 font-semibold text-2xl text-center mb-3">
                             Connect a Wallet
                         </h3>
                         <p className="text-center text-gray-500">

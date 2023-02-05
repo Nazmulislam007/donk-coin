@@ -15,7 +15,7 @@ export default function TokenCard({ token }) {
         <div
             role="button"
             tabIndex="0"
-            className="flex items-center gap-3 py-4 px-3 hover:bg-pink100 dark:hover:bg-darkHover rounded-md w-full"
+            className="flex items-center gap-3 py-4 px-3 hover:bg-primary-100 dark:hover:bg-darkHover rounded-md w-full"
             onClick={() => {
                 dispatch(setHideAll());
                 if (toToggle) return dispatch(selectToToken(token));

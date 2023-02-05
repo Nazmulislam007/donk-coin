@@ -9,19 +9,19 @@ export default function Overview() {
                 <p className="font-semibold mb-2 dark:text-white text-xl">Overview</p>
                 <div className="mb-5 flex gap-2 flex-wrap">
                     <div className="py-5 px-6 bg-white dark:bg-dark300 rounded-2xl flex-1">
-                        <p className="font-semibold text-pink900 mb-[1px] text-[13px] dark:text-dark900">
+                        <p className="font-semibold text-primary-contrast-100 mb-[1px] text-[13px] dark:text-dark900">
                             Total Staked
                         </p>
                         <div className="dark:text-darkText font-semibold text-xl">120,863,779</div>
                     </div>
                     <div className="py-5 px-6 bg-white dark:bg-dark300 rounded-2xl flex-1">
-                        <p className="font-semibold text-pink900 mb-[1px] text-[13px] dark:text-dark900">
+                        <p className="font-semibold text-primary-contrast-100 mb-[1px] text-[13px] dark:text-dark900">
                             Total Staked
                         </p>
                         <div className="dark:text-darkText font-semibold text-xl">120,863,779</div>
                     </div>
                     <div className="py-5 px-6 bg-white dark:bg-dark300 rounded-2xl flex-1">
-                        <p className="font-semibold text-pink900 mb-[1px] text-[13px] dark:text-dark900">
+                        <p className="font-semibold text-primary-contrast-100 mb-[1px] text-[13px] dark:text-dark900">
                             Total Staked
                         </p>
                         <div className="dark:text-darkText font-semibold text-xl">120,863,779</div>

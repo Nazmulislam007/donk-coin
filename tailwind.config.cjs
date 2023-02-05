@@ -9,10 +9,13 @@ module.exports = {
                 poppin: ['Poppins', 'sans-serif'],
             },
             colors: {
-                pink100: 'hsl(22, 24%, 93%)',
-                pink900: '#736666',
-                orange500: 'hsl(22, 100%, 65%)',
-                orange900: 'hsl(41, 80%, 47%)',
+                'primary-100': 'hsl(22, 24%, 93%)',
+                'primary-contrast-100': 'hsl(0, 6%, 43%)', // text color for lite background
+                'primary-hover-100': 'hsl(24deg 18% 89%)',
+
+                'accent-100': 'hsl(22deg 100% 64% / 71%)',
+                'accent-400': 'hsl(22, 100%, 65%)',
+                'accent-hover-400': 'hsl(22, 100%, 61%)',
 
                 dark300: 'hsl(235, 20%, 23%)',
                 dark400: 'hsl(236, 19%, 15%)',

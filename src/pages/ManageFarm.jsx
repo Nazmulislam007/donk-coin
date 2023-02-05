@@ -9,7 +9,7 @@ export default function ManageFarm() {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-pink100 dark:bg-dark500 pt-3 pb-14">
+        <div className="bg-primary-100 dark:bg-dark500 pt-3 pb-14">
             <section className="max-w-5xl w-[90%] mx-auto">
                 <header className="">
                     <div className="fic gap-1 relative bg-[#f5d273] p-4 rounded-3xl">

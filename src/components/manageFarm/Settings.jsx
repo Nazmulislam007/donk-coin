@@ -35,17 +35,17 @@ export default function Settings() {
                     <button
                         type="button"
                         onClick={() => setShowHide(false)}
-                        className="py-[2px] px-[3px] hover:bg-pink100 dark:text-darkText dark:hover:bg-darkHover"
+                        className="py-[2px] px-[3px] hover:bg-primary-100 dark:text-darkText dark:hover:bg-darkHover"
                     >
                         <ClearIcon style={{ fontSize: '20px' }} />
                     </button>
                 </div>
                 <article className="px-4 py-2">
                     <header className="flex items-center justify-between mb-1">
-                        <p className="text-xs font-medium text-pink900 dark:text-[#7d808b]">
+                        <p className="text-xs font-medium text-primary-contrast-100 dark:text-[#7d808b]">
                             Slippage tolerance
                         </p>
-                        <span className="text-pink900 dark:text-[#777777]">
+                        <span className="text-primary-contrast-100 dark:text-[#777777]">
                             <PrivacyTipOutlinedIcon fontSize="20px" />
                         </span>
                     </header>
@@ -54,7 +54,7 @@ export default function Settings() {
                             <button
                                 className={`px-2 py-2 ${
                                     selectPercentage === percentage
-                                        ? 'bg-[#ff8945b4] text-white border-none'
+                                        ? 'bg-accent-100 text-white border-none'
                                         : ''
                                 } rounded-xl border dark:border-dark900`}
                                 onClick={() => {
@@ -111,7 +111,7 @@ export default function Settings() {
                             <button
                                 type="button"
                                 onClick={() => setChecked(!checked)}
-                                className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-orange500 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange500"
+                                className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-accent-400 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-accent-400"
                             />
                         </label>
                         <p className="text-xs dark:text-[#7d808b]">Safe Mode</p>

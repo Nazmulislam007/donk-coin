@@ -9,7 +9,7 @@ export default function Footer() {
                     <li className="font-bold text-xl mb-4 dark:text-white">Need help?</li>
                     {/* <li className="mb-4 text-sm font-medium">
                         Visit{' '}
-                        <a href="/" className="text-orange500 hover:underline">
+                        <a href="/" className="text-accent-400 hover:underline">
                             our support centre
                         </a>{' '}
                         for troubleshooting
@@ -19,7 +19,7 @@ export default function Footer() {
                         <a
                             target="_blank"
                             href="https://discord.gg/c5SnGZWUF8"
-                            className="text-orange500 hover:underline"
+                            className="text-accent-400 hover:underline"
                             rel="noreferrer"
                         >
                             our official Discord
@@ -28,7 +28,7 @@ export default function Footer() {
                     </li>
                     <li className="mb-5">
                         <ul className="flex items-center gap-3 justify-between w-full">
-                            <li className="w-10 h-10 rounded-full bg-orange500 p-2">
+                            <li className="w-10 h-10 rounded-full bg-accent-400 p-2">
                                 <a
                                     target="_blank"
                                     href="https://discord.gg/c5SnGZWUF8"
@@ -37,7 +37,7 @@ export default function Footer() {
                                     <img src={discord} alt="discord" />
                                 </a>
                             </li>
-                            <li className="w-10 h-10 rounded-full bg-orange500 p-2">
+                            <li className="w-10 h-10 rounded-full bg-accent-400 p-2">
                                 <a
                                     target="_blank"
                                     href="https://twitter.com/donksol?s=21&t=H840g90JZa4v2LPWSf689Q"
@@ -46,12 +46,12 @@ export default function Footer() {
                                     <img src={twitter} alt="twitter" />
                                 </a>
                             </li>
-                            <li className="w-10 h-10 rounded-full bg-orange500">
+                            <li className="w-10 h-10 rounded-full bg-accent-400">
                                 <a href="/">
                                     <img src={m} alt="m" />
                                 </a>
                             </li>
-                            <li className="w-10 h-10 rounded-full bg-orange500 p-1">
+                            <li className="w-10 h-10 rounded-full bg-accent-400 p-1">
                                 <a href="/">
                                     <img src={github} alt="github" />
                                 </a>
@@ -59,7 +59,7 @@ export default function Footer() {
                         </ul>
                     </li>
                     {/* <li>
-                        <ul className="flex items-center gap-2 text-orange500 font-medium text-sm flex-wrap">
+                        <ul className="flex items-center gap-2 text-accent-400 font-medium text-sm flex-wrap">
                             <li>
                                 <a href="/">Security</a>
                             </li>

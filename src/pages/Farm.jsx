@@ -8,7 +8,7 @@ import TopFarmCards from '../components/farm/TopFarmCards';
 
 export default function Farm() {
     return (
-        <div className="bg-pink100 dark:bg-dark500 pt-5 pb-14 min-h-[80vh]">
+        <div className="bg-primary-100 dark:bg-dark500 pt-5 pb-14 min-h-[80vh]">
             <section className="max-w-6xl w-[90%] mx-auto">
                 <TopFarmCards />
                 <header>

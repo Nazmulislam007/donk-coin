@@ -9,7 +9,7 @@ export default function Token() {
     const navigate = useNavigate();
 
     return (
-        <div className="bg-pink100 dark:bg-dark500 pt-3 pb-14">
+        <div className="bg-primary-100 dark:bg-dark500 pt-3 pb-14">
             <section className="max-w-6xl w-[90%] mx-auto">
                 <header className="pb-14">
                     <button
@@ -24,7 +24,7 @@ export default function Token() {
                         <img src={bitcoin} alt="bitcoin" width={50} />
                         <p className="font-semibold text-5xl dark:text-darkText">Bitcoin</p>
                     </div>
-                    <p className="text-sm mt-2 ml-1 text-pink900 dark:text-dark900">
+                    <p className="text-sm mt-2 ml-1 text-primary-contrast-100 dark:text-dark900">
                         Rewards distributed very few days
                     </p>
                 </header>

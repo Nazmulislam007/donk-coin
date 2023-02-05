@@ -7,7 +7,7 @@ export default function RemoveLiquidity() {
 
     return (
         <div>
-            <p className="dark:text-dark900 text-xs text-pink900 pl-1 pt-4">Your Pool Tokens</p>
+            <p className="dark:text-dark900 text-xs text-primary-contrast-100 pl-1 pt-4">Your Pool Tokens</p>
             <label
                 htmlFor="minute"
                 className="flex items-center gap-1 rounded-xl border dark:border-dark900 py-3 px-3 border-gray-300 my-3"
@@ -24,7 +24,7 @@ export default function RemoveLiquidity() {
                     <button
                         className={`p-2 ${
                             selectPercentage === percentage
-                                ? 'bg-[#ff8945b4] text-white border-none'
+                                ? 'bg-accent-100 text-white border-none'
                                 : ''
                         } rounded-xl border border-gray-300 dark:border-dark900`}
                         onClick={() => setSelectPercentage(percentage)}
@@ -56,7 +56,7 @@ export default function RemoveLiquidity() {
             {inputValue && (
                 <button
                     type="button"
-                    className="bg-orange500 text-white w-full py-[14px] rounded-2xl custom-shadow hover:bg-[#ff8138] mb-4"
+                    className="bg-accent-400 text-white w-full py-[14px] rounded-2xl custom-shadow hover:bg-accent-hover-400 mb-4"
                 >
                     Approve JLP
                     <span className="ml-4">
