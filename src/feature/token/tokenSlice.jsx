@@ -18,15 +18,14 @@ export const tokenSlice = createSlice({
     reducers: {
         selectSwipToken: (state, action) => {
             state.swip.selected = action.payload;
-        },
-        selectToToken: (state, action) => {
-            state.to.selected = action.payload;
-        },
-        setFilter: (state, action) => {
-            state.filter = action.payload;
+            state.swip.toggle = false;
         },
         setSwipToggle: (state) => {
             state.swip.toggle = true;
+        },
+        selectToToken: (state, action) => {
+            state.to.selected = action.payload;
+            state.to.toggle = false;
         },
         setToToggle: (state) => {
             state.to.toggle = true;
@@ -34,6 +33,10 @@ export const tokenSlice = createSlice({
         setHideAll: (state) => {
             state.to.toggle = false;
             state.swip.toggle = false;
+        },
+
+        setFilter: (state, action) => {
+            state.filter = action.payload;
         },
     },
 });

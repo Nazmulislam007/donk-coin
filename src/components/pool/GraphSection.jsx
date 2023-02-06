@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import RechartGraph from '../stake/RechartGraph';
 
 export default function GraphSection() {
-    const [activeBtn, setActiveBtn] = useState('4H');
+    const [duration, setDuration] = useState('4H');
 
     return (
         <section className="basis-full">
@@ -17,25 +17,25 @@ export default function GraphSection() {
                     <p className="text-2xl font-semibold dark:text-white">$86,029,43</p>
                 </div>
                 <ul className="flex items-center gap-1 font-medium px-1 py-1 rounded-md border border-primary-contrast-100 dark:border-dark900 text-primary-contrast-100 dark:text-dark900 w-fit">
-                    {['5m', '15m', '1H', '4H'].map((duration) => (
-                        <li key={duration}>
+                    {['15m', '1H', '4H', '1D'].map((time) => (
+                        <li key={time}>
                             <button
                                 type="button"
                                 className={`py-1 px-2 hover:bg-primary-contrast-100 dark:hover:bg-darkHover hover:text-white rounded-md ${
-                                    activeBtn === duration
+                                    duration === time
                                         ? 'bg-primary-contrast-100 dark:bg-darkHover text-white'
                                         : ''
                                 }`}
-                                onClick={() => setActiveBtn(duration)}
+                                onClick={() => setDuration(time)}
                             >
-                                {duration}
+                                {time}
                             </button>
                         </li>
                     ))}
                 </ul>
             </header>
             <div className="my-5 sm:h-[280px] h-[200px]">
-                <RechartGraph />
+                <RechartGraph duration={duration} />
             </div>
         </section>
     );

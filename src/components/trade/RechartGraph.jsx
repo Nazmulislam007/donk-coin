@@ -1,50 +1,77 @@
 import React from 'react';
-import { Area, AreaChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-const data = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-    },
-];
+export default function RechartGraph({ duration }) {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const data = [
+        {
+            time: 1,
+            uv: 4000,
+            pv: 2400,
+        },
+        {
+            time: 2,
+            uv: 3000,
+            pv: 1398,
+        },
+        {
+            time: 3,
+            uv: 2000,
+            pv: 9800,
+        },
+        {
+            time: 4,
+            uv: 2780,
+            pv: 3908,
+        },
+        {
+            time: 5,
+            uv: 1890,
+            pv: 4800,
+        },
+        {
+            time: 6,
+            uv: 2390,
+            pv: 3800,
+        },
+        {
+            time: 7,
+            uv: 3490,
+            pv: 4300,
+        },
+    ];
 
-export default function RechartGraph() {
+    let newData;
+
+    switch (duration) {
+        case '1W': {
+            newData = data;
+            break;
+        }
+        case '1D': {
+            newData = data.slice(1, -1);
+            break;
+        }
+        case '4H': {
+            newData = data.slice(2, -1);
+            break;
+        }
+        case '1H': {
+            newData = data.slice(3, -1);
+            break;
+        }
+        case '15m': {
+            newData = data.slice(4, -1);
+            break;
+        }
+        default:
+            newData = data;
+            break;
+    }
+
     return (
         <ResponsiveContainer>
-            <AreaChart data={data}>
-                <Line type="monotone" dataKey="uv" stroke="#ff8e4c" />
-                {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <AreaChart data={newData}>
                 <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#ff8e4c" stopOpacity={0.8} />
@@ -76,6 +103,7 @@ export default function RechartGraph() {
                     stroke="#ff8e4c"
                     fillOpacity={1}
                     fill="url(#colorUv)"
+                    animationDuration={0}
                 />
                 <Area
                     type="monotone"
@@ -83,6 +111,7 @@ export default function RechartGraph() {
                     stroke="#82ca9d"
                     fillOpacity={1}
                     fill="url(#colorPv)"
+                    animationDuration={0}
                 />
             </AreaChart>
         </ResponsiveContainer>

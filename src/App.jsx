@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Route, Routes, useLocation } from 'react-router-dom';
-import ConnectWallet from './layout/ConnectWallet';
+import ConnectWallet from './layout/Connectwallet/ConnectWallet';
 import Footer from './layout/Footer';
 import Nav from './layout/navbar/Nav';
 import SelectTokens from './layout/SelectTokens';

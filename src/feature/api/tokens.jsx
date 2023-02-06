@@ -112,7 +112,7 @@ const tokens = [
     {
         uuid: 11,
         symbol: 'wbtce',
-        name: 'Wrapped BTC',
+        name: 'Wrapped',
         icon: 'https://firebasestorage.googleapis.com/v0/b/donk-coin-e36c7.appspot.com/o/images%2Fwbtce.png?alt=media&token=822289af-1035-46e4-a29f-c1c72bd5d7fa',
         '24hVolume': '6656744',
         price: '567',

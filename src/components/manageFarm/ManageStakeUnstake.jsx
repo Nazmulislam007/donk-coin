@@ -1,7 +1,7 @@
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
+import ConnectWalletBtn from '../../layout/Connectwallet/ConnectWalletBtn';
 import Settings from './Settings';
 
 export default function ManageStakeUnstake() {

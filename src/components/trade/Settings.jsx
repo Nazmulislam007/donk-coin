@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import ClearIcon from '@mui/icons-material/Clear';
+import SettingsIcon from '@mui/icons-material/Settings';
 import React, { useState } from 'react';
-import { settings } from '../../assets';
 import SlippageInput from './SlippageInput';
 
 export default function Settings() {
@@ -12,10 +12,10 @@ export default function Settings() {
         <div className="relative">
             <button
                 type="button"
-                className="flex items-center py-2.5 px-5 bg-accent-400 rounded-full gap-2 font-medium text-white ml-auto"
+                className="flex items-center py-2 px-3 bg-accent-400 rounded-full gap-1 font-medium text-white ml-auto text-sm"
                 onClick={() => setShowHide(!showHide)}
             >
-                <img src={settings} alt="setting-icon" />
+                <SettingsIcon />
                 Settings
             </button>
             <form

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { etherium, terra } from '../../assets';
-import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
+import ConnectWalletBtn from '../../layout/Connectwallet/ConnectWalletBtn';
 import AddLiquidity from './AddLiquidity';
 import RemoveLiquidity from './RemoveLiquidity';
 

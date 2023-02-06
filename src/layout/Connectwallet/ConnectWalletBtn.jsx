@@ -1,13 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { showConnectWallet } from '../feature/wallet/walletSlice';
+import { showConnectWallet } from '../../feature/wallet/walletSlice';
 
-export default function ConnectWalletBtn({ removeCreatePool }) {
+export default function ConnectWalletBtn() {
     const dispatch = useDispatch();
 
     const handleClick = () => {
         dispatch(showConnectWallet(true));
-        removeCreatePool(false);
     };
 
     return (

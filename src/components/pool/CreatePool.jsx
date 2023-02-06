@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useState } from 'react';
 import AmountInput from '../../layout/AmountInput';
-import ConnectWalletBtn from '../../layout/ConnectWalletBtn';
+import ConnectWalletBtn from '../../layout/Connectwallet/ConnectWalletBtn';
 
 export default function CreatePool() {
     const [showHide, setShowHide] = useState(false);

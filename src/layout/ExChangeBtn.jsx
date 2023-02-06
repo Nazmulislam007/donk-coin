@@ -1,20 +1,22 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-export default function ExChangeBtn({ img, name, setToggle, toggle }) {
+export default function ExChangeBtn(data) {
+    const { flipBtnData } = data || {};
+    const { icon, symbol, setToggle, toggle } = flipBtnData;
     const dispatch = useDispatch();
 
     return (
         <button
-            className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-4 py-[7.2px] text-center inline-flex items-center min-w-[125px]"
+            className="bg-[#33271E] text-white font-medium rounded-3xl text-sm px-3 py-2 text-center inline-flex items-center min-w-[125px]"
             type="button"
             onClick={() => dispatch(setToggle())}
         >
-            {img && <img src={img} alt="salena" className="mr-3 w-[27px] rounded-full" />}
-            {name ? (
-                <span className="font-semibold w-max">{name}</span>
+            {icon && <img src={icon} alt="salena" className="mr-3 w-[23px] rounded-full" />}
+            {symbol ? (
+                <span className="font-semibold w-max uppercase">{symbol}</span>
             ) : (
-                <span className="mr-2 py-1 font-medium w-max">Select token</span>
+                <span className="mr-1 ml-1 py-1 font-medium w-max">Select token</span>
             )}
             <svg
                 className={`w-4 h-4 ml-2 ${toggle ? 'rotate-180' : ''}`}

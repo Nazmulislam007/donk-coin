@@ -1,5 +1,5 @@
 import React from 'react';
-import { Area, AreaChart, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const data = [
     {
@@ -32,12 +32,38 @@ const data = [
     },
 ];
 
-export default function RechartGraph() {
+export default function RechartGraph({ duration }) {
+    let newData;
+
+    switch (duration) {
+        case '1W': {
+            newData = data;
+            break;
+        }
+        case '1D': {
+            newData = data.slice(1, -1);
+            break;
+        }
+        case '4H': {
+            newData = data.slice(2, -1);
+            break;
+        }
+        case '1H': {
+            newData = data.slice(3, -1);
+            break;
+        }
+        case '15m': {
+            newData = data.slice(4, -1);
+            break;
+        }
+        default:
+            newData = data;
+            break;
+    }
+
     return (
         <ResponsiveContainer>
-            <AreaChart data={data}>
-                <Line type="monotone" dataKey="uv" stroke="#ff8e4c" />
-                {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <AreaChart data={newData}>
                 <defs>
                     <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#ff8e4c" stopOpacity={0.8} />
@@ -65,6 +91,7 @@ export default function RechartGraph() {
                     stroke="#ff8e4c"
                     fillOpacity={1}
                     fill="url(#colorUv)"
+                    animationDuration={100}
                 />
             </AreaChart>
         </ResponsiveContainer>
