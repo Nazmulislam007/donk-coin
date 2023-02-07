@@ -1,6 +1,6 @@
 import SearchIcon from '@mui/icons-material/Search';
 import React from 'react';
-import CreatePool from './CreatePool';
+import AddLiquidity from './AddLiquidity';
 
 export default function SearchPool() {
     return (
@@ -17,7 +17,7 @@ export default function SearchPool() {
                     className="w-full outline-none focus:outline-none text-sm bg-transparent"
                 />
             </label>
-            <CreatePool />
+            <AddLiquidity />
         </div>
     );
 }

@@ -95,7 +95,7 @@ export default function TradTable() {
                 <div className="overflow-x-auto">
                     <table className="table-auto min-w-[800px] w-full">
                         <thead>
-                            <tr>
+                            <tr className="dark:text-darkText">
                                 <th className="text-start px-5 pb-[10px] font-medium opacity-40">
                                     #
                                 </th>

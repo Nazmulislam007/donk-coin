@@ -103,7 +103,6 @@ export default function RechartGraph({ duration }) {
                     stroke="#ff8e4c"
                     fillOpacity={1}
                     fill="url(#colorUv)"
-                    animationDuration={0}
                 />
                 <Area
                     type="monotone"
@@ -111,7 +110,6 @@ export default function RechartGraph({ duration }) {
                     stroke="#82ca9d"
                     fillOpacity={1}
                     fill="url(#colorPv)"
-                    animationDuration={0}
                 />
             </AreaChart>
         </ResponsiveContainer>

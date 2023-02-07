@@ -16,7 +16,7 @@ export default function FarmCard() {
                         TERRA-ETHERIUM
                     </span>
                 </div>
-                <div className="text-xs px-2 py-1 bg-primary-hover-100 font-medium dark:text-darkText">
+                <div className="text-xs px-2 py-1 bg-primary-hover-100 dark:bg-darkHover font-medium dark:text-darkText">
                     BOOST
                 </div>
             </header>
@@ -34,7 +34,9 @@ export default function FarmCard() {
                     <p className="font-semibold dark:text-darkText">$0</p>
                 </div>
                 <div>
-                    <p className="text-xs text-primary-contrast-100 mb-[2px] dark:text-dark900">APR (30D)</p>
+                    <p className="text-xs text-primary-contrast-100 mb-[2px] dark:text-dark900">
+                        APR (30D)
+                    </p>
                     <p className="font-semibold dark:text-darkText">2.58%</p>
                 </div>
                 <div>

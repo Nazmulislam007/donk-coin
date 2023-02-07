@@ -1,4 +1,5 @@
-import React, { useRef } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updownarrow } from '../../assets';
 import { setSwipToggle, setToToggle } from '../../feature/token/tokenSlice';
@@ -37,6 +38,16 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
         toggle: toToggle,
     };
 
+    useEffect(() => {
+        if (toRef.current.value === '' || swipRef.current.value === '') return;
+        swipRef.current.value = (toRef.current.value * to.selected.price) / swip.selected.price;
+    }, [swip, swip.selected]);
+
+    useEffect(() => {
+        if (toRef.current.value === '' || swipRef.current.value === '') return;
+        toRef.current.value = (swipRef.current.value * swip.selected.price) / to.selected.price;
+    }, [to, to.selected]);
+
     const handleDebounce = debounce((e) => {
         if (!swip.selected && !to.selected) return;
         if (e.target.name === 'swip') {
@@ -45,6 +56,13 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
             swipRef.current.value = (e.target.value * to.selected.price) / swip.selected.price;
         }
     });
+
+    const handleFlipBtn = () => {
+        setFlipBtn(!flipBtn);
+        if (toRef.current.value === '' || swipRef.current.value === '') return;
+        toRef.current.value = swipRef.current.value;
+        swipRef.current.value = (toRef.current.value * swip.selected.price) / to.selected.price;
+    };
 
     return (
         <div className="basis-full mt-8 lg:mt-0">
@@ -58,8 +76,8 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                             type="number"
                             className="outline-none text-2xl w-1/2 text-black dark:text-darkText bg-transparent"
                             placeholder="0.0"
-                            name="swip"
-                            ref={swipRef}
+                            name={flipBtn ? 'swip' : 'to'}
+                            ref={flipBtn ? swipRef : toRef}
                             onChange={(e) => handleDebounce(e)}
                         />
                     </div>
@@ -68,10 +86,10 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                 <div className="w-full relative h-[1px] bg-black dark:bg-white my-12">
                     <button
                         type="button"
-                        onClick={() => setFlipBtn(!flipBtn)}
+                        onClick={handleFlipBtn}
                         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full"
                     >
-                        <img src={updownarrow} alt="arrow" />
+                        <img src={updownarrow} name="isSwip" alt="arrow" />
                     </button>
                 </div>
                 <div className="flex items-center justify-between">
@@ -81,8 +99,8 @@ export default function SwipBox({ flipBtn, setFlipBtn }) {
                             type="number"
                             className="outline-none text-2xl w-1/2 text-black dark:text-darkText bg-transparent"
                             placeholder="0.0"
-                            name="to"
-                            ref={toRef}
+                            name={flipBtn ? 'to' : 'swip'}
+                            ref={flipBtn ? toRef : swipRef}
                             onChange={(e) => handleDebounce(e)}
                         />
                     </div>

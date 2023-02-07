@@ -64,7 +64,7 @@ export default function SwipResult({ flipBtn }) {
                     </div>
                 </>
             ) : (
-                <div className="flex items-center justify-center h-full py-10">
+                <div className="flex items-center justify-center h-full py-10 dark:text-darkText">
                     No currencies selected
                 </div>
             )}
